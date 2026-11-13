@@ -1,0 +1,8 @@
+tag=min_ss_100C_1v60_flow
+setup_ws_ns=56.91113358352595
+hold_ws_ns=0.9052822935728955
+setup_tns=0.0
+hold_tns=0.0
+slew_vio=0
+cap_vio=0
+fanout_vio=1

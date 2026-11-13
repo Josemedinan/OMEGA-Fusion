@@ -1,0 +1,8 @@
+tag=nom_ss_100C_1v60_flow
+setup_ws_ns=55.770765783336174
+hold_ws_ns=0.9113632071233724
+setup_tns=0.0
+hold_tns=0.0
+slew_vio=0
+cap_vio=0
+fanout_vio=1

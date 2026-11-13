@@ -1,0 +1,8 @@
+tag=max_ss_100C_1v60_libonly
+setup_ws_ns=52.026027930196506
+hold_ws_ns=0.05051248308518552
+setup_tns=0.0
+hold_tns=0.0
+slew_vio=3
+cap_vio=0
+fanout_vio=0

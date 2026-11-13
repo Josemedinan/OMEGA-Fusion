@@ -1,0 +1,8 @@
+Clock core_clk
+   5.21 source latency _74803_/CLK ^
+  -4.43 target latency _75638_/CLK ^
+   0.25 clock uncertainty
+  -0.19 CRPR
+--------------
+   0.84 setup skew
+

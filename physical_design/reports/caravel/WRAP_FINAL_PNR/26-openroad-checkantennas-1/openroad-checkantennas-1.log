@@ -1,0 +1,86 @@
+Reading timing models for corner nom_tt_025C_1v80…
+Reading timing library for the 'nom_tt_025C_1v80' corner at '<HOME>/.ciel/ciel/sky130/versions/8afc8346a57fe1ab7934ba5a6056ea8b43078e71/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib'…
+Reading OpenROAD database at '<HOME>/omega-fusion-tapeout/openlane/user_project_wrapper_v6/runs/WRAP_FINAL_PNR/24-openroad-detailedrouting/user_project_wrapper.odb'…
+Reading design constraints file at '<HOME>/omega-fusion-tapeout/openlane/user_project_wrapper_v6/omega_iosync_compat.sdc'…
+[INFO]: Creating clock {clk} for port wb_clk_i with period: 25.0
+[INFO]: Setting clock uncertainity to: 0.25
+[INFO]: Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+[INFO]: Setting maximum transition to: 1.5
+[INFO]: Setting maximum fanout to: 10
+[INFO]: Setting timing derate to: 5.0 %
+[INFO]: Setting clock latency range: 4.65 : 5.57
+[INFO]: Setting clock transition: 0.61
+%OL_CREATE_REPORT <HOME>/omega-fusion-tapeout/openlane/user_project_wrapper_v6/runs/WRAP_FINAL_PNR/26-openroad-checkantennas-1/reports/antenna.rpt
+Net: _0021_
+  Pin:   _0787_/D (sky130_fd_sc_hd__dfxtp_2)
+    Layer: mcon
+      Partial area ratio:    0.23
+      Required ratio:    3.00 (Gate area) 
+      Cumulative area ratio:    0.23
+      Required ratio:    0.00 (Cumulative area) 
+
+    Layer: met1
+      Partial area ratio:  183.01
+      Required ratio:    0.00 (Gate area) 
+      Cumulative area ratio:  183.01
+      Required ratio:    0.00 (Cumulative area) 
+      Partial area ratio:  913.56
+      Required ratio:  400.00 (Side area) (VIOLATED)
+      Cumulative area ratio:  913.56
+      Required ratio:    0.00 (Cumulative side area) 
+
+    Layer: via
+      Partial area ratio:    0.36
+      Required ratio:    6.00 (Gate area) 
+      Cumulative area ratio:    0.59
+      Required ratio:    0.00 (Cumulative area) 
+
+    Layer: met2
+      Partial area ratio:   28.28
+      Required ratio:    0.00 (Gate area) 
+      Cumulative area ratio:  211.28
+      Required ratio:    0.00 (Cumulative area) 
+      Partial area ratio:  140.97
+      Required ratio: 2958.68 (Side area) 
+      Cumulative area ratio: 1054.53
+      Required ratio:    0.00 (Cumulative side area) 
+
+
+  Pin:   ANTENNA_1984/DIODE (sky130_fd_sc_hd__diode_2)
+    Layer: mcon
+      Partial area ratio:    0.07
+      Required ratio:   10.82 (Gate area) 
+      Cumulative area ratio:    0.07
+      Required ratio:    0.00 (Cumulative area) 
+
+    Layer: met1
+      Partial area ratio:    2.14
+      Required ratio:    0.00 (Gate area) 
+      Cumulative area ratio:    2.14
+      Required ratio:    0.00 (Cumulative area) 
+      Partial area ratio:   10.54
+      Required ratio: 2773.88 (Side area) 
+      Cumulative area ratio:   10.54
+      Required ratio:    0.00 (Cumulative side area) 
+
+    Layer: via
+      Partial area ratio:    0.05
+      Required ratio:   21.65 (Gate area) 
+      Cumulative area ratio:    0.12
+      Required ratio:    0.00 (Cumulative area) 
+
+    Layer: met2
+      Partial area ratio:   28.28
+      Required ratio:    0.00 (Gate area) 
+      Cumulative area ratio:   30.42
+      Required ratio:    0.00 (Cumulative area) 
+      Partial area ratio:  140.97
+      Required ratio: 2958.68 (Side area) 
+      Cumulative area ratio:  151.51
+      Required ratio:    0.00 (Cumulative side area) 
+
+
+
+[INFO ANT-0002] Found 1 net violations.
+[INFO ANT-0001] Found 1 pin violations.
+%OL_END_REPORT

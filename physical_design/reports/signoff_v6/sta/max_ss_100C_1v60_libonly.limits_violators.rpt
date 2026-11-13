@@ -1,0 +1,8 @@
+max slew
+
+Pin                                      Limit      Slew     Slack
+------------------------------------------------------------------
+clkbuf_0_clk/A                          1.5000    1.5640   -0.0640 (VIOLATED)
+ANTENNA_728/DIODE                       1.5000    1.5639   -0.0639 (VIOLATED)
+clk                                     1.4983    1.5200   -0.0218 (VIOLATED)
+

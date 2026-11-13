@@ -1,0 +1,8 @@
+tag=nom_ff_n40C_1v95_flow
+setup_ws_ns=85.74687626605737
+hold_ws_ns=0.10357570356944734
+setup_tns=0.0
+hold_tns=0.0
+slew_vio=0
+cap_vio=0
+fanout_vio=1

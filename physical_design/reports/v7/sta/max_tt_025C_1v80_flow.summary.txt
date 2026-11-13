@@ -1,0 +1,8 @@
+tag=max_tt_025C_1v80_flow
+setup_ws_ns=77.00047888192785
+hold_ws_ns=0.3175453233694725
+setup_tns=0.0
+hold_tns=0.0
+slew_vio=0
+cap_vio=0
+fanout_vio=1

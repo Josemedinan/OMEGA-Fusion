@@ -1,0 +1,79 @@
+OpenROAD dcf36133a369abc8f3c5e5738cd4d82e4903c0e0 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ODB-0227] LEF file: <HOME>/.ciel/ciel/sky130/versions/8afc8346a57fe1ab7934ba5a6056ea8b43078e71/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef, created 14 layers, 25 vias
+[WARNING ODB-0220] WARNING (LEFPARS-2008): NOWIREEXTENSIONATPIN statement is obsolete in version 5.6 or later.
+The NOWIREEXTENSIONATPIN statement will be ignored. See file <HOME>/.ciel/ciel/sky130/versions/8afc8346a57fe1ab7934ba5a6056ea8b43078e71/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef at line 2.
+
+[INFO ODB-0227] LEF file: <HOME>/.ciel/ciel/sky130/versions/8afc8346a57fe1ab7934ba5a6056ea8b43078e71/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef, created 437 library cells
+BEFORE
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |     47041
+     1000 |     +0.0% |       0 |       3 |             1 |     46041
+     2000 |     +0.3% |      27 |     210 |            65 |     45041
+     3000 |     +0.8% |      39 |     594 |           147 |     44041
+     4000 |     +1.0% |      45 |     750 |           176 |     43041
+     5000 |     +1.1% |      52 |     831 |           194 |     42041
+     6000 |     +1.2% |      80 |     919 |           231 |     41041
+     7000 |     +1.3% |      80 |     937 |           237 |     40041
+     8000 |     +1.4% |      84 |    1030 |           261 |     39041
+     9000 |     +1.4% |      87 |    1069 |           268 |     38041
+    10000 |     +2.0% |      94 |    1641 |           326 |     37041
+    11000 |     +2.1% |     105 |    1690 |           348 |     36041
+    12000 |     +2.1% |     113 |    1697 |           355 |     35041
+    13000 |     +2.2% |     114 |    1710 |           359 |     34041
+    14000 |     +2.2% |     116 |    1718 |           362 |     33041
+    15000 |     +2.2% |     117 |    1726 |           364 |     32041
+    16000 |     +2.2% |     121 |    1766 |           376 |     31041
+    17000 |     +2.2% |     121 |    1772 |           377 |     30041
+    18000 |     +2.6% |     121 |    1990 |           417 |     29041
+    19000 |     +2.6% |     121 |    2003 |           422 |     28041
+    20000 |     +3.1% |     122 |    2296 |           479 |     27041
+    21000 |     +3.1% |     124 |    2304 |           485 |     26041
+    22000 |     +3.6% |     126 |    2647 |           554 |     25041
+    23000 |     +3.9% |     130 |    2830 |           591 |     24041
+    24000 |     +4.1% |     138 |    3021 |           630 |     23041
+    25000 |     +5.6% |     145 |    4139 |           848 |     22041
+    26000 |     +6.2% |     150 |    4610 |           927 |     21041
+    27000 |     +6.2% |     150 |    4610 |           927 |     20041
+    28000 |     +6.2% |     150 |    4610 |           927 |     19041
+    29000 |     +6.2% |     150 |    4610 |           927 |     18041
+    30000 |     +6.2% |     150 |    4610 |           927 |     17041
+    31000 |     +6.2% |     150 |    4610 |           927 |     16041
+    32000 |     +6.2% |     150 |    4610 |           927 |     15041
+    33000 |     +6.2% |     150 |    4610 |           927 |     14041
+    34000 |     +6.6% |     150 |    4901 |          1007 |     13041
+    35000 |     +6.7% |     150 |    4928 |          1009 |     12041
+    36000 |     +6.7% |     150 |    4932 |          1010 |     11041
+    37000 |     +6.8% |     150 |    5007 |          1019 |     10041
+    38000 |     +6.8% |     150 |    5007 |          1019 |      9041
+    39000 |     +6.8% |     150 |    5007 |          1019 |      8041
+    40000 |     +6.8% |     150 |    5007 |          1019 |      7041
+    41000 |     +6.8% |     150 |    5007 |          1019 |      6041
+    42000 |     +6.8% |     150 |    5007 |          1019 |      5041
+    43000 |     +6.8% |     150 |    5007 |          1019 |      4041
+    44000 |     +6.8% |     150 |    5007 |          1019 |      3041
+    45000 |     +7.5% |     150 |    5492 |          1184 |      2041
+    46000 |     +7.5% |     150 |    5492 |          1184 |      1041
+    47000 |    +11.1% |     181 |    8334 |          1551 |        41
+    final |    +11.1% |     181 |    8334 |          1551 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0034] Found 590 slew violations.
+[INFO RSZ-0035] Found 1443 fanout violations.
+[INFO RSZ-0036] Found 3 capacitance violations.
+[INFO RSZ-0039] Resized 181 instances.
+[INFO RSZ-0038] Inserted 8334 buffers in 1551 nets.
+Cell type report:                       Count       Area
+  Fill cell                              1284    4819.62
+  Tap cell                              43470   54389.66
+  Antenna cell                            673    1684.12
+  Buffer                                    2      10.01
+  Clock buffer                           2061   27309.94
+  Timing Repair Buffer                   9511   90091.40
+  Inverter                                463    1787.96
+  Clock inverter                          277    2891.52
+  Sequential cell                       10323  230269.60
+  Multi-Input combinational cell        32660  346269.60
+  Total                                100724  759523.44

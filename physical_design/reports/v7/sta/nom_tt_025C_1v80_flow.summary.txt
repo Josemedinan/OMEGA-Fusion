@@ -1,0 +1,8 @@
+tag=nom_tt_025C_1v80_flow
+setup_ws_ns=77.6426389847984
+hold_ws_ns=0.31591262938945874
+setup_tns=0.0
+hold_tns=0.0
+slew_vio=0
+cap_vio=0
+fanout_vio=1

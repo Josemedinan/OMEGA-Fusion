@@ -1,0 +1,8 @@
+tag=nom_ss_100C_1v60_libonly
+setup_ws_ns=53.23283858160721
+hold_ws_ns=0.2942321941645787
+setup_tns=0.0
+hold_tns=0.0
+slew_vio=0
+cap_vio=0
+fanout_vio=0

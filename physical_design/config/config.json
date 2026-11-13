@@ -1,0 +1,27 @@
+{
+  "DESIGN_NAME": "omega_fusion_soc_asic",
+  "CLOCK_PORT": "clk",
+  "CLOCK_PERIOD": 100,
+  "VERILOG_FILES": [
+    "dir::../../rtl/accelerators/omega_fusion_mac.sv",
+    "dir::../../rtl/accelerators/omega_fusion_mac_folded.sv",
+    "dir::../../rtl/accelerators/omega_fusion.sv",
+    "dir::../../rtl/cpu/omega_rv32_controller.sv",
+    "dir::../../rtl/soc/omega_fusion_soc_asic.sv"
+  ],
+  "DIE_AREA": [
+    0,
+    0,
+    1800,
+    1800
+  ],
+  "CORE_AREA": [
+    25,
+    25,
+    1775,
+    1775
+  ],
+  "PDN_MULTILAYER": false,
+  "PDN_CORE_RING": false,
+  "RT_MAX_LAYER": "met4"
+}

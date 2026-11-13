@@ -1,0 +1,8 @@
+tag=min_tt_025C_1v80_flow
+setup_ws_ns=78.2965372536637
+hold_ws_ns=0.3131561676639194
+setup_tns=0.0
+hold_tns=0.0
+slew_vio=0
+cap_vio=0
+fanout_vio=1

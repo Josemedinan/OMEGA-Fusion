@@ -1,0 +1,187 @@
+[09:22:00] INFO     Running containerized command:              container.py:285
+[15:22:02] [I] Starting a new run of the 'Classic' flow with the tag flow.py:654
+               'OMEGA_V6_SIGNOFF5'.                                             
+[15:22:02] [I] Starting…                                       sequential.py:339
+[15:22:02] [I] Skipping step 'Verilator Lint'…                 sequential.py:370
+[15:22:02] [I] Skipping step 'Lint Timing Error Checker'…      sequential.py:370
+[15:22:02] [I] Skipping step 'Lint Errors Checker'…            sequential.py:370
+[15:22:02] [I] Skipping step 'Lint Warnings Checker'…          sequential.py:370
+[15:22:02] [I] Skipping step 'Generate JSON Header'…           sequential.py:370
+[15:22:02] [I] Skipping step 'Synthesis'…                      sequential.py:370
+[15:22:02] [I] Skipping step 'Unmapped Cells Checker'…         sequential.py:370
+[15:22:02] [I] Skipping step 'Yosys Synth Checks'…             sequential.py:370
+[15:22:02] [I] Skipping step 'Netlist Assign Statement         sequential.py:370
+               Checker'…                                                        
+[15:22:02] [I] Skipping step 'Check SDC Files'…                sequential.py:370
+[15:22:02] [I] Skipping step 'Check Macro Instances'…          sequential.py:370
+[15:22:02] [I] Skipping step 'STA (Pre-PnR)'…                  sequential.py:370
+[15:22:02] [I] Skipping step 'Floorplan Init'…                 sequential.py:370
+[15:22:02] [I] Skipping step 'Dump RC Values'…                 sequential.py:370
+[15:22:02] [I] Skipping step 'Check Antenna Properties of      sequential.py:370
+               Macros Pins in Their LEF Views'…                                 
+[15:22:02] [I] Skipping step 'Set Power Connections'…          sequential.py:370
+[15:22:02] [I] Skipping step 'Manual Macro Placement'…         sequential.py:370
+[15:22:02] [I] Skipping step 'Cut Rows'…                       sequential.py:370
+[15:22:02] [I] Skipping step 'Tap/Decap Insertion'…            sequential.py:370
+[15:22:02] [I] Skipping step 'Add PDN obstructions'…           sequential.py:370
+[15:22:02] [I] Skipping step 'Generate PDN'…                   sequential.py:370
+[15:22:02] [I] Skipping step 'Remove PDN obstructions'…        sequential.py:370
+[15:22:02] [I] Skipping step 'Add Obstructions'…               sequential.py:370
+[15:22:02] [I] Skipping step 'Global Placement Skip IO'…       sequential.py:370
+[15:22:02] [I] Skipping step 'I/O Placement'…                  sequential.py:370
+[15:22:02] [I] Skipping step 'Custom I/O Placement'…           sequential.py:370
+[15:22:02] [I] Skipping step 'Apply DEF Template'…             sequential.py:370
+[15:22:02] [I] Skipping step 'Global Placement'…               sequential.py:370
+[15:22:02] [I] Skipping step 'Write Verilog Header'…           sequential.py:370
+[15:22:02] [I] Skipping step 'Power Grid Violation Checker'…   sequential.py:370
+[15:22:02] [I] Skipping step 'STA (Mid-PnR)'…                  sequential.py:370
+[15:22:02] [I] Skipping step 'Repair Design (Post-Global       sequential.py:370
+               Placement)'…                                                     
+[15:22:02] [I] Skipping step 'Manual Global Placement'…        sequential.py:370
+[15:22:02] [I] Skipping step 'Detailed Placement'…             sequential.py:370
+[15:22:02] [I] Skipping step 'Clock Tree Synthesis'…           sequential.py:370
+[15:22:02] [I] Skipping step 'STA (Mid-PnR)'…                  sequential.py:370
+[15:22:02] [I] Skipping step 'Resizer Timing Optimizations     sequential.py:370
+               (Post-Clock Tree Synthesis)'…                                    
+[15:22:02] [I] Skipping step 'STA (Mid-PnR)'…                  sequential.py:370
+[15:22:02] [I] Skipping step 'Global Routing'…                 sequential.py:370
+[15:22:02] [I] Skipping step 'Check Antennas'…                 sequential.py:370
+[15:22:02] [I] Gating variable for step                        sequential.py:362
+               'OpenROAD.RepairDesignPostGRT' set to 'False'-                   
+               the step will be skipped.                                        
+[15:22:02] [I] Skipping step 'Repair Design (Post-Global       sequential.py:370
+               Routing)'…                                                       
+[15:22:02] [I] Skipping step 'Diodes on Ports'…                sequential.py:370
+[15:22:02] [I] Gating variable for step                        sequential.py:362
+               'Odb.HeuristicDiodeInsertion' set to 'False'-                    
+               the step will be skipped.                                        
+[15:22:02] [I] Skipping step 'Heuristic Diode Insertion'…      sequential.py:370
+[15:22:02] [I] Skipping step 'Antenna Repair'…                 sequential.py:370
+[15:22:02] [I] Gating variable for step                        sequential.py:362
+               'OpenROAD.ResizerTimingPostGRT' set to 'False'-                  
+               the step will be skipped.                                        
+[15:22:02] [I] Skipping step 'Resizer Timing Optimizations     sequential.py:370
+               (Post-Global Routing)'…                                          
+[15:22:02] [I] Skipping step 'STA (Mid-PnR)'…                  sequential.py:370
+[15:22:02] [I] Skipping step 'Detailed Routing'…               sequential.py:370
+[15:22:02] [I] Skipping step 'Remove Obstructions'…            sequential.py:370
+[15:22:02] [I] Skipping step 'Check Antennas'…                 sequential.py:370
+[15:22:02] [I] Skipping step 'Routing DRC Checker'…            sequential.py:370
+[15:22:02] [I] Skipping step 'Report Disconnected Pins'…       sequential.py:370
+[15:22:02] [I] Skipping step 'Disconnected Pins Checker'…      sequential.py:370
+[15:22:02] [I] Skipping step 'Report Wire Length'…             sequential.py:370
+[15:22:02] [I] Skipping step 'Wire Length Threshold Checker'…  sequential.py:370
+[15:22:02] [I] Skipping step 'Fill Insertion'…                 sequential.py:370
+[15:22:02] [I] Skipping step 'Generate Cell Frequency Tables'… sequential.py:370
+[15:22:02] [I] Skipping step 'Parasitics (RC) Extraction'…     sequential.py:370
+[15:22:02] [I] Skipping step 'STA (Post-PnR)'…                 sequential.py:370
+[15:22:02] [I] Skipping step 'IR Drop Report'…                 sequential.py:370
+[15:22:02] [I] Skipping step 'GDSII Stream Out (Magic)'…       sequential.py:370
+[15:22:02] [I] Skipping step 'GDSII Stream Out (KLayout)'…     sequential.py:370
+[15:22:02] [I] Skipping step 'Render Image (w/ KLayout)'…      sequential.py:370
+[15:22:02] [I] Skipping step 'Write LEF (Magic)'…              sequential.py:370
+[15:22:02] [I] Skipping step 'Check Antenna Properties of Pins sequential.py:370
+               in The Generated Design LEF view'…                               
+[15:22:02] [I] Skipping step 'KLayout vs. Magic XOR'…          sequential.py:370
+[15:22:02] [I] Skipping step 'XOR Difference Checker'…         sequential.py:370
+[15:22:02] [V] Running 'Magic.DRC' at                               step.py:1138
+               'runs/OMEGA_V6_SIGNOFF5/01-magic-drc'…                           
+[15:22:02] [I] Logging subprocess to                                step.py:1336
+               'runs/OMEGA_V6_SIGNOFF5/01-magic-drc/magic-drc.log'…             
+[15:50:10] [V] Running 'KLayout.DRC' at                             step.py:1138
+               'runs/OMEGA_V6_SIGNOFF5/02-klayout-drc'…                         
+[15:50:10] [I] Running KLayout DRC with 8 threads…                klayout.py:578
+[15:50:10] [I] Logging subprocess to                                step.py:1336
+               'runs/OMEGA_V6_SIGNOFF5/02-klayout-drc/klayout-drc.l             
+               og'…                                                             
+[16:21:18] [I] Logging subprocess to                                step.py:1336
+               'runs/OMEGA_V6_SIGNOFF5/02-klayout-drc/xml_drc_repor             
+               t_to_json.log'…                                                  
+[16:21:19] [V] Running 'Checker.MagicDRC' at                        step.py:1138
+               'runs/OMEGA_V6_SIGNOFF5/03-checker-magicdrc'…                    
+[16:21:19] [I] Check for Magic DRC errors clear.                  checker.py:131
+[16:21:19] [V] Running 'Checker.KLayoutDRC' at                      step.py:1138
+               'runs/OMEGA_V6_SIGNOFF5/04-checker-klayoutdrc'…                  
+[16:21:19] [I] Check for KLayout DRC errors clear.                checker.py:131
+[16:21:19] [V] Running 'Magic.SpiceExtraction' at                   step.py:1138
+               'runs/OMEGA_V6_SIGNOFF5/05-magic-spiceextraction'…               
+[16:21:19] [I] Logging subprocess to                                step.py:1336
+               'runs/OMEGA_V6_SIGNOFF5/05-magic-spiceextraction/mag             
+               ic-spiceextraction.log'…                                         
+[16:40:56] [V] Running 'Checker.IllegalOverlap' at                  step.py:1138
+               'runs/OMEGA_V6_SIGNOFF5/06-checker-illegaloverlap'…              
+[16:40:56] [I] Check for Magic Illegal Overlap errors clear.      checker.py:131
+[16:40:56] [V] Running 'Netgen.LVS' at                              step.py:1138
+               'runs/OMEGA_V6_SIGNOFF5/07-netgen-lvs'…                          
+[16:40:56] [I] Logging subprocess to                                step.py:1336
+               'runs/OMEGA_V6_SIGNOFF5/07-netgen-lvs/netgen-lvs.log             
+               '…                                                               
+[16:47:02] [V] Running 'Checker.LVS' at                             step.py:1138
+               'runs/OMEGA_V6_SIGNOFF5/08-checker-lvs'…                         
+[16:47:02] [I] Check for LVS errors clear.                        checker.py:131
+[16:47:02] [I] Gating variable for step 'Yosys.EQY' set to     sequential.py:362
+               'False'- the step will be skipped.                               
+[16:47:02] [I] Skipping step 'Equivalence Check'…              sequential.py:370
+[16:47:02] [V] Running 'Checker.SetupViolations' at                 step.py:1138
+               'runs/OMEGA_V6_SIGNOFF5/09-checker-setupviolations'…             
+[16:47:02] [V] No setup violations found                          checker.py:628
+[16:47:02] [V] Running 'Checker.HoldViolations' at                  step.py:1138
+               'runs/OMEGA_V6_SIGNOFF5/10-checker-holdviolations'…              
+[16:47:02] [V] No hold violations found                           checker.py:628
+[16:47:02] [V] Running 'Checker.MaxSlewViolations' at               step.py:1138
+               'runs/OMEGA_V6_SIGNOFF5/11-checker-maxslewviolations             
+               '…                                                               
+[16:47:02] [W] Max Slew violations found in the following         checker.py:626
+               corners:                                                         
+               * max_ff_n40C_1v95                                               
+               * max_ss_100C_1v60                                               
+               * max_tt_025C_1v80                                               
+               * min_ss_100C_1v60                                               
+               * min_tt_025C_1v80                                               
+               * nom_ss_100C_1v60                                               
+               * nom_tt_025C_1v80                                               
+[16:47:02] [V] No max slew violations found                       checker.py:628
+[16:47:02] [V] Running 'Checker.MaxCapViolations' at                step.py:1138
+               'runs/OMEGA_V6_SIGNOFF5/12-checker-maxcapviolations'             
+               …                                                                
+[16:47:02] [W] Max Cap violations found in the following corners: checker.py:626
+               * max_ff_n40C_1v95                                               
+               * max_ss_100C_1v60                                               
+               * max_tt_025C_1v80                                               
+               * min_ff_n40C_1v95                                               
+               * min_ss_100C_1v60                                               
+               * min_tt_025C_1v80                                               
+               * nom_ff_n40C_1v95                                               
+               * nom_ss_100C_1v60                                               
+               * nom_tt_025C_1v80                                               
+[16:47:02] [V] No max cap violations found                        checker.py:628
+[16:47:02] [V] Running 'Misc.ReportManufacturability' at            step.py:1138
+               'runs/OMEGA_V6_SIGNOFF5/13-misc-reportmanufacturabil             
+               ity'…                                                            
+[16:47:02] [I] Saving views to                                      state.py:209
+               '<HOME>/omega-fusion-tapeout/openlane/ome             
+               ga_fusion_soc_v2/runs/OMEGA_V6_SIGNOFF5/final'…                  
+[16:47:17] [I] Flow complete.                                  sequential.py:413
+
+
+[16:47:17] [W] The following warnings were generated by the flow:    flow.py:699
+[16:47:17] [W] [Checker.MaxSlewViolations] Max Slew violations found flow.py:701
+               in the following corners:                                        
+               * max_ff_n40C_1v95                                               
+               * max_ss_100C_1v60                                               
+               * max_tt_025C_1v80                                               
+               * min_ss_100C_1v60                                               
+               * min_tt_025C_1v80                                               
+               * nom_ss_100C_1v60                                               
+               * nom_tt_025C_1v80                                               
+[16:47:17] [W] [Checker.MaxCapViolations] Max Cap violations found   flow.py:701
+               in the following corners:                                        
+               * max_ff_n40C_1v95                                               
+               * max_ss_100C_1v60                                               
+               * max_tt_025C_1v80                                               
+               * min_ff_n40C_1v95                                               
+               * min_ss_100C_1v60                                               
+               * min_tt_025C_1v80                                               
+               * nom_ff_n40C_1v95                                               
+               * nom_ss_100C_1v60                                               
+               * nom_tt_025C_1v80                                               

@@ -1,0 +1,349 @@
+[22:52:22] INFO     Running containerized command:              container.py:285
+[04:52:22] [I] Starting a new run of the 'Classic' flow with the tag flow.py:654
+               'OMEGA_V6_ECO2'.                                                 
+[04:52:22] [I] Starting…                                       sequential.py:339
+[04:52:22] [I] Skipping step 'Verilator Lint'…                 sequential.py:370
+[04:52:22] [I] Skipping step 'Lint Timing Error Checker'…      sequential.py:370
+[04:52:22] [I] Skipping step 'Lint Errors Checker'…            sequential.py:370
+[04:52:22] [I] Skipping step 'Lint Warnings Checker'…          sequential.py:370
+[04:52:22] [I] Skipping step 'Generate JSON Header'…           sequential.py:370
+[04:52:22] [I] Skipping step 'Synthesis'…                      sequential.py:370
+[04:52:22] [I] Skipping step 'Unmapped Cells Checker'…         sequential.py:370
+[04:52:22] [I] Skipping step 'Yosys Synth Checks'…             sequential.py:370
+[04:52:22] [I] Skipping step 'Netlist Assign Statement         sequential.py:370
+               Checker'…                                                        
+[04:52:22] [I] Skipping step 'Check SDC Files'…                sequential.py:370
+[04:52:22] [I] Skipping step 'Check Macro Instances'…          sequential.py:370
+[04:52:22] [I] Skipping step 'STA (Pre-PnR)'…                  sequential.py:370
+[04:52:22] [I] Skipping step 'Floorplan Init'…                 sequential.py:370
+[04:52:22] [I] Skipping step 'Dump RC Values'…                 sequential.py:370
+[04:52:22] [I] Skipping step 'Check Antenna Properties of      sequential.py:370
+               Macros Pins in Their LEF Views'…                                 
+[04:52:22] [I] Skipping step 'Set Power Connections'…          sequential.py:370
+[04:52:22] [I] Skipping step 'Manual Macro Placement'…         sequential.py:370
+[04:52:22] [I] Skipping step 'Cut Rows'…                       sequential.py:370
+[04:52:22] [I] Skipping step 'Tap/Decap Insertion'…            sequential.py:370
+[04:52:22] [I] Skipping step 'Add PDN obstructions'…           sequential.py:370
+[04:52:22] [I] Skipping step 'Generate PDN'…                   sequential.py:370
+[04:52:22] [I] Skipping step 'Remove PDN obstructions'…        sequential.py:370
+[04:52:22] [I] Skipping step 'Add Obstructions'…               sequential.py:370
+[04:52:22] [I] Skipping step 'Global Placement Skip IO'…       sequential.py:370
+[04:52:22] [I] Skipping step 'I/O Placement'…                  sequential.py:370
+[04:52:22] [I] Skipping step 'Custom I/O Placement'…           sequential.py:370
+[04:52:22] [I] Skipping step 'Apply DEF Template'…             sequential.py:370
+[04:52:22] [I] Skipping step 'Global Placement'…               sequential.py:370
+[04:52:22] [I] Skipping step 'Write Verilog Header'…           sequential.py:370
+[04:52:22] [I] Skipping step 'Power Grid Violation Checker'…   sequential.py:370
+[04:52:22] [I] Skipping step 'STA (Mid-PnR)'…                  sequential.py:370
+[04:52:22] [I] Skipping step 'Repair Design (Post-Global       sequential.py:370
+               Placement)'…                                                     
+[04:52:22] [I] Skipping step 'Manual Global Placement'…        sequential.py:370
+[04:52:22] [I] Skipping step 'Detailed Placement'…             sequential.py:370
+[04:52:22] [I] Skipping step 'Clock Tree Synthesis'…           sequential.py:370
+[04:52:22] [I] Skipping step 'STA (Mid-PnR)'…                  sequential.py:370
+[04:52:22] [I] Skipping step 'Resizer Timing Optimizations     sequential.py:370
+               (Post-Clock Tree Synthesis)'…                                    
+[04:52:22] [I] Skipping step 'STA (Mid-PnR)'…                  sequential.py:370
+[04:52:22] [V] Running 'OpenROAD.GlobalRouting' at                  step.py:1138
+               'runs/OMEGA_V6_ECO2/01-openroad-globalrouting'…                  
+[04:52:22] [I] Logging subprocess to                                step.py:1336
+               'runs/OMEGA_V6_ECO2/01-openroad-globalrouting/openro             
+               ad-globalrouting.log'…                                           
+[04:52:37] [V] Running 'OpenROAD.CheckAntennas' at                  step.py:1138
+               'runs/OMEGA_V6_ECO2/02-openroad-checkantennas'…                  
+[04:52:37] [I] Logging subprocess to                                step.py:1336
+               'runs/OMEGA_V6_ECO2/02-openroad-checkantennas/openro             
+               ad-checkantennas.log'…                                           
+[04:53:04] [I] Gating variable for step                        sequential.py:362
+               'OpenROAD.RepairDesignPostGRT' set to 'False'-                   
+               the step will be skipped.                                        
+[04:53:04] [I] Skipping step 'Repair Design (Post-Global       sequential.py:370
+               Routing)'…                                                       
+[04:53:04] [V] Running 'Odb.DiodesOnPorts' at                       step.py:1138
+               'runs/OMEGA_V6_ECO2/03-odb-diodesonports'…                       
+[04:53:04] [I] 'DIODE_ON_PORTS' is set to 'none': skipping            odb.py:820
+               'Odb.DiodesOnPorts'…                                             
+[04:53:04] [I] Gating variable for step                        sequential.py:362
+               'Odb.HeuristicDiodeInsertion' set to 'False'-                    
+               the step will be skipped.                                        
+[04:53:04] [I] Skipping step 'Heuristic Diode Insertion'…      sequential.py:370
+[04:53:04] [V] Running 'OpenROAD.RepairAntennas' at                 step.py:1138
+               'runs/OMEGA_V6_ECO2/04-openroad-repairantennas'…                 
+[04:53:04] [V] Running 'OpenROAD.DiodeInsertion' at                 step.py:1138
+               'runs/OMEGA_V6_ECO2/04-openroad-repairantennas/1-ope             
+               nroad-diodeinsertion'…                                           
+[04:53:04] [I] Logging subprocess to                                step.py:1336
+               'runs/OMEGA_V6_ECO2/04-openroad-repairantennas/1-ope             
+               nroad-diodeinsertion/openroad-diodeinsertion.log'…               
+[04:54:04] [V] Running 'OpenROAD.CheckAntennas' at                  step.py:1138
+               'runs/OMEGA_V6_ECO2/04-openroad-repairantennas/2-ope             
+               nroad-checkantennas'…                                            
+[04:54:04] [I] Logging subprocess to                                step.py:1336
+               'runs/OMEGA_V6_ECO2/04-openroad-repairantennas/2-ope             
+               nroad-checkantennas/openroad-checkantennas.log'…                 
+[04:54:32] [I] Gating variable for step                        sequential.py:362
+               'OpenROAD.ResizerTimingPostGRT' set to 'False'-                  
+               the step will be skipped.                                        
+[04:54:32] [I] Skipping step 'Resizer Timing Optimizations     sequential.py:370
+               (Post-Global Routing)'…                                          
+[04:54:32] [V] Running 'OpenROAD.STAMidPNR-3' at                    step.py:1138
+               'runs/OMEGA_V6_ECO2/05-openroad-stamidpnr-3'…                    
+[04:54:32] [I] Logging subprocess to                                step.py:1336
+               'runs/OMEGA_V6_ECO2/05-openroad-stamidpnr-3/openroad             
+               -stamidpnr-3.log'…                                               
+[04:56:49] [V] Running 'OpenROAD.DetailedRouting' at                step.py:1138
+               'runs/OMEGA_V6_ECO2/06-openroad-detailedrouting'…                
+[04:56:49] [I] Running TritonRoute with 8 threads…              openroad.py:2002
+[04:56:49] [I] Logging subprocess to                                step.py:1336
+               'runs/OMEGA_V6_ECO2/06-openroad-detailedrouting/open             
+               road-detailedrouting.log'…                                       
+[04:56:50] [W] [DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is    openroad.py:314
+               not supported. Skipping for layer mcon                           
+[04:56:50] [W] [DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is    openroad.py:314
+               not supported. Skipping for layer mcon                           
+[04:56:50] [W] [DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is    openroad.py:314
+               not supported. Skipping for layer via                            
+[04:56:50] [W] [DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is    openroad.py:314
+               not supported. Skipping for layer via                            
+[04:56:50] [W] [DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is    openroad.py:314
+               not supported. Skipping for layer via2                           
+[04:56:50] [W] [DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is    openroad.py:314
+               not supported. Skipping for layer via2                           
+[04:56:50] [W] [DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is    openroad.py:314
+               not supported. Skipping for layer via3                           
+[04:56:50] [W] [DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is    openroad.py:314
+               not supported. Skipping for layer via3                           
+[04:56:50] [W] [DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is    openroad.py:314
+               not supported. Skipping for layer via4                           
+[04:56:50] [W] [DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is    openroad.py:314
+               not supported. Skipping for layer via4                           
+[05:18:30] [V] Running 'Odb.RemoveRoutingObstructions' at           step.py:1138
+               'runs/OMEGA_V6_ECO2/07-odb-removeroutingobstructions             
+               '…                                                               
+[05:18:30] [I] 'ROUTING_OBSTRUCTIONS' is not defined. Skipping        odb.py:589
+               'Odb.RemoveRoutingObstructions'…                                 
+[05:18:30] [V] Running 'OpenROAD.CheckAntennas-1' at                step.py:1138
+               'runs/OMEGA_V6_ECO2/08-openroad-checkantennas-1'…                
+[05:18:30] [I] Logging subprocess to                                step.py:1336
+               'runs/OMEGA_V6_ECO2/08-openroad-checkantennas-1/open             
+               road-checkantennas-1.log'…                                       
+[05:18:49] [V] Running 'Checker.TrDRC' at                           step.py:1138
+               'runs/OMEGA_V6_ECO2/09-checker-trdrc'…                           
+[05:18:49] [I] Check for Routing DRC errors clear.                checker.py:131
+[05:18:49] [V] Running 'Odb.ReportDisconnectedPins' at              step.py:1138
+               'runs/OMEGA_V6_ECO2/10-odb-reportdisconnectedpins'…              
+[05:18:49] [I] Logging subprocess to                                step.py:1336
+               'runs/OMEGA_V6_ECO2/10-odb-reportdisconnectedpins/od             
+               b-reportdisconnectedpins.log'…                                   
+[05:18:53] [V] Running 'Checker.DisconnectedPins' at                step.py:1138
+               'runs/OMEGA_V6_ECO2/11-checker-disconnectedpins'…                
+[05:18:53] [I] Check for critical disconnected pins clear.        checker.py:131
+[05:18:53] [V] Running 'Odb.ReportWireLength' at                    step.py:1138
+               'runs/OMEGA_V6_ECO2/12-odb-reportwirelength'…                    
+[05:18:53] [I] Logging subprocess to                                step.py:1336
+               'runs/OMEGA_V6_ECO2/12-odb-reportwirelength/odb-repo             
+               rtwirelength.log'…                                               
+[05:18:54] [V] Running 'Checker.WireLength' at                      step.py:1138
+               'runs/OMEGA_V6_ECO2/13-checker-wirelength'…                      
+[05:18:54] [W] Threshold for Threshold-surpassing long wires is   checker.py:108
+               not set. The checker will be skipped.                            
+[05:18:54] [V] Running 'OpenROAD.FillInsertion' at                  step.py:1138
+               'runs/OMEGA_V6_ECO2/14-openroad-fillinsertion'…                  
+[05:18:54] [I] Logging subprocess to                                step.py:1336
+               'runs/OMEGA_V6_ECO2/14-openroad-fillinsertion/openro             
+               ad-fillinsertion.log'…                                           
+[05:19:12] [V] Running 'Odb.CellFrequencyTables' at                 step.py:1138
+               'runs/OMEGA_V6_ECO2/15-odb-cellfrequencytables'…                 
+[05:19:12] [I] Logging subprocess to                                step.py:1336
+               'runs/OMEGA_V6_ECO2/15-odb-cellfrequencytables/buffe             
+               r_list.txt'…                                                     
+[05:19:12] [I] Logging subprocess to                                step.py:1336
+               'runs/OMEGA_V6_ECO2/15-odb-cellfrequencytables/odb-c             
+               ellfrequencytables.log'…                                         
+[05:19:20] [V] Running 'OpenROAD.RCX' at                            step.py:1138
+               'runs/OMEGA_V6_ECO2/16-openroad-rcx'…                            
+[05:19:20] [I] Running RCX for corners matching nom_*           openroad.py:2145
+               (<HOME>/omega-fusion-tapeout/openlane                 
+               /omega_fusion_soc_v2/runs/OMEGA_V6_ECO2/16-openr                 
+               oad-rcx/nom/rcx.log)…                                            
+[05:19:20] [I] Logging subprocess to                                step.py:1336
+               'runs/OMEGA_V6_ECO2/16-openroad-rcx/nom/rcx.log'…                
+[05:19:36] [I] Finished RCX for corners matching nom_*.         openroad.py:2154
+[05:19:36] [I] Running RCX for corners matching min_*           openroad.py:2145
+               (<HOME>/omega-fusion-tapeout/openlane                 
+               /omega_fusion_soc_v2/runs/OMEGA_V6_ECO2/16-openr                 
+               oad-rcx/min/rcx.log)…                                            
+[05:19:36] [I] Logging subprocess to                                step.py:1336
+               'runs/OMEGA_V6_ECO2/16-openroad-rcx/min/rcx.log'…                
+[05:19:52] [I] Finished RCX for corners matching min_*.         openroad.py:2154
+[05:19:52] [I] Running RCX for corners matching max_*           openroad.py:2145
+               (<HOME>/omega-fusion-tapeout/openlane                 
+               /omega_fusion_soc_v2/runs/OMEGA_V6_ECO2/16-openr                 
+               oad-rcx/max/rcx.log)…                                            
+[05:19:52] [I] Logging subprocess to                                step.py:1336
+               'runs/OMEGA_V6_ECO2/16-openroad-rcx/max/rcx.log'…                
+[05:20:07] [I] Finished RCX for corners matching max_*.         openroad.py:2154
+[05:20:07] [V] Running 'OpenROAD.STAPostPNR' at                     step.py:1138
+               'runs/OMEGA_V6_ECO2/17-openroad-stapostpnr'…                     
+[05:20:07] [I] Starting STA for the nom_tt_025C_1v80 timing      openroad.py:747
+               corner…                                                          
+[05:20:07] [I] Logging subprocess to                                step.py:1336
+               'runs/OMEGA_V6_ECO2/17-openroad-stapostpnr/nom_tt_02             
+               5C_1v80/sta.log'…                                                
+[05:22:39] [I] Finished STA for the nom_tt_025C_1v80 timing      openroad.py:762
+               corner.                                                          
+[05:22:39] [I] Logging subprocess to                                step.py:1336
+               'runs/OMEGA_V6_ECO2/17-openroad-stapostpnr/nom_tt_02             
+               5C_1v80/filter_unannotated.log'…                                 
+[05:22:42] [I] Starting STA for the nom_ss_100C_1v60 timing      openroad.py:747
+               corner…                                                          
+[05:22:42] [I] Logging subprocess to                                step.py:1336
+               'runs/OMEGA_V6_ECO2/17-openroad-stapostpnr/nom_ss_10             
+               0C_1v60/sta.log'…                                                
+[05:25:13] [I] Finished STA for the nom_ss_100C_1v60 timing      openroad.py:762
+               corner.                                                          
+[05:25:13] [I] Logging subprocess to                                step.py:1336
+               'runs/OMEGA_V6_ECO2/17-openroad-stapostpnr/nom_ss_10             
+               0C_1v60/filter_unannotated.log'…                                 
+[05:25:16] [I] Starting STA for the nom_ff_n40C_1v95 timing      openroad.py:747
+               corner…                                                          
+[05:25:16] [I] Logging subprocess to                                step.py:1336
+               'runs/OMEGA_V6_ECO2/17-openroad-stapostpnr/nom_ff_n4             
+               0C_1v95/sta.log'…                                                
+[05:27:49] [I] Finished STA for the nom_ff_n40C_1v95 timing      openroad.py:762
+               corner.                                                          
+[05:27:49] [I] Logging subprocess to                                step.py:1336
+               'runs/OMEGA_V6_ECO2/17-openroad-stapostpnr/nom_ff_n4             
+               0C_1v95/filter_unannotated.log'…                                 
+[05:27:52] [I] Starting STA for the min_tt_025C_1v80 timing      openroad.py:747
+               corner…                                                          
+[05:27:52] [I] Logging subprocess to                                step.py:1336
+               'runs/OMEGA_V6_ECO2/17-openroad-stapostpnr/min_tt_02             
+               5C_1v80/sta.log'…                                                
+[05:30:21] [I] Finished STA for the min_tt_025C_1v80 timing      openroad.py:762
+               corner.                                                          
+[05:30:21] [I] Logging subprocess to                                step.py:1336
+               'runs/OMEGA_V6_ECO2/17-openroad-stapostpnr/min_tt_02             
+               5C_1v80/filter_unannotated.log'…                                 
+[05:30:24] [I] Starting STA for the min_ss_100C_1v60 timing      openroad.py:747
+               corner…                                                          
+[05:30:24] [I] Logging subprocess to                                step.py:1336
+               'runs/OMEGA_V6_ECO2/17-openroad-stapostpnr/min_ss_10             
+               0C_1v60/sta.log'…                                                
+[05:32:52] [I] Finished STA for the min_ss_100C_1v60 timing      openroad.py:762
+               corner.                                                          
+[05:32:52] [I] Logging subprocess to                                step.py:1336
+               'runs/OMEGA_V6_ECO2/17-openroad-stapostpnr/min_ss_10             
+               0C_1v60/filter_unannotated.log'…                                 
+[05:32:55] [I] Starting STA for the min_ff_n40C_1v95 timing      openroad.py:747
+               corner…                                                          
+[05:32:55] [I] Logging subprocess to                                step.py:1336
+               'runs/OMEGA_V6_ECO2/17-openroad-stapostpnr/min_ff_n4             
+               0C_1v95/sta.log'…                                                
+[05:35:23] [I] Finished STA for the min_ff_n40C_1v95 timing      openroad.py:762
+               corner.                                                          
+[05:35:23] [I] Logging subprocess to                                step.py:1336
+               'runs/OMEGA_V6_ECO2/17-openroad-stapostpnr/min_ff_n4             
+               0C_1v95/filter_unannotated.log'…                                 
+[05:35:26] [I] Starting STA for the max_tt_025C_1v80 timing      openroad.py:747
+               corner…                                                          
+[05:35:26] [I] Logging subprocess to                                step.py:1336
+               'runs/OMEGA_V6_ECO2/17-openroad-stapostpnr/max_tt_02             
+               5C_1v80/sta.log'…                                                
+[05:37:55] [I] Finished STA for the max_tt_025C_1v80 timing      openroad.py:762
+               corner.                                                          
+[05:37:55] [I] Logging subprocess to                                step.py:1336
+               'runs/OMEGA_V6_ECO2/17-openroad-stapostpnr/max_tt_02             
+               5C_1v80/filter_unannotated.log'…                                 
+[05:37:58] [I] Starting STA for the max_ss_100C_1v60 timing      openroad.py:747
+               corner…                                                          
+[05:37:58] [I] Logging subprocess to                                step.py:1336
+               'runs/OMEGA_V6_ECO2/17-openroad-stapostpnr/max_ss_10             
+               0C_1v60/sta.log'…                                                
+[05:40:27] [I] Finished STA for the max_ss_100C_1v60 timing      openroad.py:762
+               corner.                                                          
+[05:40:28] [I] Logging subprocess to                                step.py:1336
+               'runs/OMEGA_V6_ECO2/17-openroad-stapostpnr/max_ss_10             
+               0C_1v60/filter_unannotated.log'…                                 
+[05:40:30] [I] Starting STA for the max_ff_n40C_1v95 timing      openroad.py:747
+               corner…                                                          
+[05:40:30] [I] Logging subprocess to                                step.py:1336
+               'runs/OMEGA_V6_ECO2/17-openroad-stapostpnr/max_ff_n4             
+               0C_1v95/sta.log'…                                                
+[05:43:00] [I] Finished STA for the max_ff_n40C_1v95 timing      openroad.py:762
+               corner.                                                          
+[05:43:00] [I] Logging subprocess to                                step.py:1336
+               'runs/OMEGA_V6_ECO2/17-openroad-stapostpnr/max_ff_n4             
+               0C_1v95/filter_unannotated.log'…                                 
+[05:43:03] [V] Running 'OpenROAD.IRDropReport' at                   step.py:1138
+               'runs/OMEGA_V6_ECO2/18-openroad-irdropreport'…                   
+[05:43:03] [W] 'VSRC_LOC_FILES' was not given a value, which    openroad.py:2245
+               may make the results of IR drop analysis                         
+               inaccurate. If you are not integrating a                         
+               top-level chip for manufacture, you may ignore                   
+               this warning, otherwise, see the documentation                   
+               for 'VSRC_LOC_FILES'.                                            
+[05:43:03] [I] Logging subprocess to                                step.py:1336
+               'runs/OMEGA_V6_ECO2/18-openroad-irdropreport/openroa             
+               d-irdropreport.log'…                                             
+[05:44:32] [V] + analyze_power_grid -net VDD -voltage_file      openroad.py:2257
+               <HOME>/omega-fusion-tapeout/openlane/                 
+               omega_fusion_soc_v2/runs/OMEGA_V6_ECO2/18-openro                 
+               ad-irdropreport/net-VDD.csv                                      
+               [INFO PSM-0040] All shapes on net VDD are                        
+               connected.                                                       
+               ########## IR report #################                           
+               Net              : VDD                                           
+               Corner           : nom_ss_100C_1v60                              
+               Total power      : 8.89e-03 W                                    
+               Supply voltage   : 1.60e+00 V                                    
+               Worstcase voltage: 1.60e+00 V                                    
+               Average voltage  : 1.60e+00 V                                    
+               Average IR drop  : 8.07e-06 V                                    
+               Worstcase IR drop: 9.18e-05 V                                    
+               Percentage drop  : 0.01 %                                        
+               ######################################                           
+               + analyze_power_grid -net VSS -voltage_file                      
+               <HOME>/omega-fusion-tapeout/openlane/                 
+               omega_fusion_soc_v2/runs/OMEGA_V6_ECO2/18-openro                 
+               ad-irdropreport/net-VSS.csv                                      
+               [INFO PSM-0040] All shapes on net VSS are                        
+               connected.                                                       
+               ########## IR report #################                           
+               Net              : VSS                                           
+               Corner           : nom_ss_100C_1v60                              
+               Total power      : 8.89e-03 W                                    
+               Supply voltage   : 0.00e+00 V                                    
+               Worstcase voltage: 7.99e-05 V                                    
+               Average voltage  : 8.05e-06 V                                    
+               Average IR drop  : 8.05e-06 V                                    
+               Worstcase IR drop: 7.99e-05 V                                    
+               Percentage drop  : 0.00 %                                        
+               ######################################                           
+                                                                                
+[05:44:32] [V] Running 'Magic.StreamOut' at                         step.py:1138
+               'runs/OMEGA_V6_ECO2/19-magic-streamout'…                         
+[05:44:32] [I] Logging subprocess to                                step.py:1336
+               'runs/OMEGA_V6_ECO2/19-magic-streamout/magic-streamo             
+               ut.log'…                                                         
+[05:45:12] [V] Running 'KLayout.StreamOut' at                       step.py:1138
+               'runs/OMEGA_V6_ECO2/20-klayout-streamout'…                       
+[05:45:12] [I] Logging subprocess to                                step.py:1336
+               'runs/OMEGA_V6_ECO2/20-klayout-streamout/klayout-str             
+               eamout.log'…                                                     
+
+[05:45:19] [W] The following warnings were generated by the flow:    flow.py:699
+[05:45:19] [W] [OpenROAD.DetailedRouting] [DRT-0349] LEF58_ENCLOSURE flow.py:701
+               with no CUTCLASS is not supported. Skipping for layer            
+               mcon (and 9 similar warnings)                                    
+[05:45:19] [W] [Checker.WireLength] Threshold for                    flow.py:701
+               Threshold-surpassing long wires is not set. The                  
+               checker will be skipped.                                         
+[05:45:19] [W] [OpenROAD.IRDropReport] 'VSRC_LOC_FILES' was not      flow.py:701
+               given a value, which may make the results of IR drop             
+               analysis inaccurate. If you are not integrating a                
+               top-level chip for manufacture, you may ignore this              
+               warning, otherwise, see the documentation for                    
+               'VSRC_LOC_FILES'.                                                
+Traceback (most recent call last):
+write /dev/stderr: no space left on device

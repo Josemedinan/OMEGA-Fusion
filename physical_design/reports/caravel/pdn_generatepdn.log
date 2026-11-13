@@ -1,0 +1,52 @@
+Reading timing models for corner nom_tt_025C_1v80…
+Reading timing library for the 'nom_tt_025C_1v80' corner at '<HOME>/.ciel/ciel/sky130/versions/8afc8346a57fe1ab7934ba5a6056ea8b43078e71/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib'…
+Reading OpenROAD database at '<HOME>/omega-fusion-tapeout/openlane/user_project_wrapper_v6/runs/WRAP_FINAL_PDN/15-openroad-tapendcapinsertion/user_project_wrapper.odb'…
+Reading design constraints file at '<HOME>/omega-fusion-tapeout/openlane/user_project_wrapper_v6/omega_iosync_compat.sdc'…
+[INFO]: Creating clock {clk} for port wb_clk_i with period: 25.0
+[INFO]: Setting clock uncertainity to: 0.25
+[INFO]: Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+[INFO]: Setting maximum transition to: 1.5
+[INFO]: Setting maximum fanout to: 10
+[INFO]: Setting timing derate to: 5.0 %
+[INFO]: Setting clock latency range: 4.65 : 5.57
+[INFO]: Setting clock transition: 0.61
+[INFO] Setting global connections...
+mprj matched with mprj
+[INFO ODB-0403] 0 connections made, 0 conflicts skipped.
+[WARNING PDN-0239] Ring shape falls outside the die bounds.
++ pdngen 
+[INFO PDN-0001] Inserting grid: stdcell_grid
+[INFO PDN-0001] Inserting grid: macro - mprj
+[WARNING PDN-0110] No via inserted between met4 and met5 at (728.9700, 1454.3300) - (732.0700, 1454.9900) on vccd1
+[WARNING PDN-0110] No via inserted between met4 and met5 at (946.1700, 951.5300) - (949.2700, 952.4700) on vccd2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (964.7700, 2052.0500) - (967.8700, 2053.2300) on vssd2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (728.9700, 1454.3300) - (732.0700, 1454.9900) on vccd1
+[WARNING PDN-0110] No via inserted between met4 and met5 at (946.1700, 951.5300) - (949.2700, 952.4700) on vccd2
+[WARNING PDN-0110] No via inserted between met4 and met5 at (964.7700, 2052.0500) - (967.8700, 2053.2300) on vssd2
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+mprj matched with mprj
+[INFO ODB-0403] 0 connections made, 0 conflicts skipped.
+Updating metrics…
+Cell type report:                       Count       Area
+  Macro                                     1 3240000.00
+  Fill cell                              3912   14684.08
+  Tap cell                              97890  122479.97
+  Buffer                                    6      30.03
+  Inverter                                  6      22.52
+  Sequential cell                         142    3020.40
+  Multi-Input combinational cell          482    3911.25
+  Total                                102439 3384148.25
+Writing OpenROAD database to '<HOME>/omega-fusion-tapeout/openlane/user_project_wrapper_v6/runs/WRAP_FINAL_PDN/17-openroad-generatepdn/user_project_wrapper.odb'…
+Writing netlist to '<HOME>/omega-fusion-tapeout/openlane/user_project_wrapper_v6/runs/WRAP_FINAL_PDN/17-openroad-generatepdn/user_project_wrapper.nl.v'…
+Writing powered netlist to '<HOME>/omega-fusion-tapeout/openlane/user_project_wrapper_v6/runs/WRAP_FINAL_PDN/17-openroad-generatepdn/user_project_wrapper.pnl.v'…
+Writing layout to '<HOME>/omega-fusion-tapeout/openlane/user_project_wrapper_v6/runs/WRAP_FINAL_PDN/17-openroad-generatepdn/user_project_wrapper.def'…
+Writing timing constraints to '<HOME>/omega-fusion-tapeout/openlane/user_project_wrapper_v6/runs/WRAP_FINAL_PDN/17-openroad-generatepdn/user_project_wrapper.sdc'…
+[INFO PSM-0040] All shapes on net vccd1 are connected.
+[INFO PSM-0040] All shapes on net vccd2 are connected.
+[INFO PSM-0040] All shapes on net vdda1 are connected.
+[INFO PSM-0040] All shapes on net vdda2 are connected.
+[INFO PSM-0040] All shapes on net vssd1 are connected.
+[INFO PSM-0040] All shapes on net vssd2 are connected.
+[INFO PSM-0040] All shapes on net vssa1 are connected.
+[INFO PSM-0040] All shapes on net vssa2 are connected.

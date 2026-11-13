@@ -1,0 +1,5 @@
+import sys; import os; sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)))
+from make_visuals import *
+psrc = "openlane/omega_fusion_soc_v2/runs/OMEGA_V4_FULL/01-openroad-globalplacement/omega_fusion_soc_asic.def (PDN only, same grid as final)"
+annotate(TMP+"/02a.png", VIS+"/02a_pdn_full_vdd_vss.png", [0,0,1800,1800], "02a Power distribution: met1 rails (horizontal) + met4 straps (vertical)", psrc, "PDN_MULTILAYER=false, PDN_CORE_RING=false: met1 rails + met4 straps (pitch 153.6 µm, width 1.6 µm), alternating VDD/VSS. Connectivity checked by PSM: 'All shapes on net VDD/VSS are connected'.", [("met1 rails","#2d6cdf"),("met4 straps","#d9a400")])
+annotate(TMP+"/02b.png", VIS+"/02b_pdn_zoom_40um_straps_rails.png", [1250,880,1290,920], "02b PDN zoom 40x40 µm: met1 rails crossing two met4 straps (VDD/VSS)", psrc, "Zoom of the power grid. Via cuts under the straps are not drawn by the DEF importer; electrical connection verified by PSM (IR-drop step), not by this image.", [("met1","#2d6cdf"),("met4","#d9a400")])

@@ -1,0 +1,8 @@
+tag=max_ff_n40C_1v95_flow
+setup_ws_ns=84.16473917804979
+hold_ws_ns=0.01688427175849938
+setup_tns=0.0
+hold_tns=0.0
+slew_vio=2
+cap_vio=23
+fanout_vio=83

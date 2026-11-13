@@ -1,0 +1,5 @@
+[01:06:41] INFO     Running containerized command:              container.py:285
+time="2026-11-12T01:08:35-06:00" level=error msg="error waiting for container: unexpected EOF"
+docker: error during connect: Post "http://%2FUsers%2F%3CHOME%3E%2F.docker%2Frun%2Fdocker.sock/v1.56/containers/a1631cc3c3e712dea001f748f43051382cba792f878d75ac0de2b293be3d1bba/start": EOF
+
+Run 'docker run --help' for more information
