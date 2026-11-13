@@ -1,0 +1,41 @@
+run,corner,hold_ws_ns,setup_ws_ns,hold_vio,setup_vio,cap_vio,slew_vio
+"V3 baseline (SDC v3, GRT-est. repair)",Overall,-0.6049,59.5194,552,0,243,8559
+"V3 baseline (SDC v3, GRT-est. repair)",nom_tt_025C_1v80,0.397,80.6699,0,0,0,0
+"V3 baseline (SDC v3, GRT-est. repair)",nom_ss_100C_1v60,-0.4209,60.4654,167,0,201,5116
+"V3 baseline (SDC v3, GRT-est. repair)",nom_ff_n40C_1v95,0.2481,87.8156,0,0,0,0
+"V3 baseline (SDC v3, GRT-est. repair)",min_tt_025C_1v80,0.3955,81.2332,0,0,0,0
+"V3 baseline (SDC v3, GRT-est. repair)",min_ss_100C_1v60,-0.2694,61.4269,125,0,136,3347
+"V3 baseline (SDC v3, GRT-est. repair)",min_ff_n40C_1v95,0.2473,88.2587,0,0,0,0
+"V3 baseline (SDC v3, GRT-est. repair)",max_tt_025C_1v80,0.3892,79.9345,0,0,2,1179
+"V3 baseline (SDC v3, GRT-est. repair)",max_ss_100C_1v60,-0.6049,59.5194,260,0,243,8559
+"V3 baseline (SDC v3, GRT-est. repair)",max_ff_n40C_1v95,0.2474,87.1209,0,0,0,844
+"V4 (SDC v4, full flow)",Overall,-1.1977,41.9458,1300,0,64,12908
+"V4 (SDC v4, full flow)",nom_tt_025C_1v80,0.1508,70.5836,0,0,21,766
+"V4 (SDC v4, full flow)",nom_ss_100C_1v60,-0.9105,43.8046,364,0,47,10516
+"V4 (SDC v4, full flow)",nom_ff_n40C_1v95,0.1005,80.9742,0,0,21,138
+"V4 (SDC v4, full flow)",min_tt_025C_1v80,0.2932,71.7211,0,0,19,485
+"V4 (SDC v4, full flow)",min_ss_100C_1v60,-0.659,45.8277,268,0,36,8033
+"V4 (SDC v4, full flow)",min_ff_n40C_1v95,0.0992,81.731,0,0,19,57
+"V4 (SDC v4, full flow)",max_tt_025C_1v80,-0.025,69.4583,26,0,23,997
+"V4 (SDC v4, full flow)",max_ss_100C_1v60,-1.1977,41.9458,642,0,64,12908
+"V4 (SDC v4, full flow)",max_ff_n40C_1v95,0.0546,80.2291,0,0,23,199
+V5 (ECO round 1),Overall,0.0305,51.7236,0,0,25,231
+V5 (ECO round 1),nom_tt_025C_1v80,0.2164,75.7434,0,0,21,19
+V5 (ECO round 1),nom_ss_100C_1v60,0.2902,53.0146,0,0,23,184
+V5 (ECO round 1),nom_ff_n40C_1v95,0.1057,84.4649,0,0,22,3
+V5 (ECO round 1),min_tt_025C_1v80,0.2961,76.5615,0,0,20,19
+V5 (ECO round 1),min_ss_100C_1v60,0.4776,54.4003,0,0,20,131
+V5 (ECO round 1),min_ff_n40C_1v95,0.1037,85.0057,0,0,20,0
+V5 (ECO round 1),max_tt_025C_1v80,0.1129,74.9902,0,0,23,24
+V5 (ECO round 1),max_ss_100C_1v60,0.0548,51.7236,0,0,25,231
+V5 (ECO round 1),max_ff_n40C_1v95,0.0305,83.9219,0,0,23,16
+V6 FINAL (ECO round 2),Overall,0.0169,52.026,0,0,23,158
+V6 FINAL (ECO round 2),nom_tt_025C_1v80,0.193,75.8643,0,0,20,16
+V6 FINAL (ECO round 2),nom_ss_100C_1v60,0.2942,53.2328,0,0,20,105
+V6 FINAL (ECO round 2),nom_ff_n40C_1v95,0.0926,84.6484,0,0,21,0
+V6 FINAL (ECO round 2),min_tt_025C_1v80,0.2728,76.6473,0,0,18,5
+V6 FINAL (ECO round 2),min_ss_100C_1v60,0.4645,54.6419,0,0,18,71
+V6 FINAL (ECO round 2),min_ff_n40C_1v95,0.1037,85.1719,0,0,18,0
+V6 FINAL (ECO round 2),max_tt_025C_1v80,0.0862,75.1461,0,0,23,16
+V6 FINAL (ECO round 2),max_ss_100C_1v60,0.0505,52.026,0,0,23,158
+V6 FINAL (ECO round 2),max_ff_n40C_1v95,0.0169,84.1647,0,0,23,2

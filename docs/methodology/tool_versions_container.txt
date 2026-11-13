@@ -1,0 +1,10 @@
+dcf36133a369abc8f3c5e5738cd4d82e4903c0e0 
+Yosys 0.62 (git sha1 7326bb7d6641500ecb285c291a54a662cb1e76cf, clang++ 21.1.2 -fPIC -O3)
+KLayout 0.30.7
+8.3.623
+Netgen 1.5.316 compiled on Tue Feb 10 10:44:29 UTC 2026
+Icarus Verilog version 13.0 (devel) ()
+LibreLane v3.0.11
+host: iverilog/verilator from oss-cad-suite; matplotlib 3.11.2
+image id: sha256:245c80a357d619aa22c8602f4022616e44750c9a322a6f924d6f0c1f521acdfb
+PDK sky130A ciel hash: 8afc8346a57fe1ab7934ba5a6056ea8b43078e71 (8afc8346a57fe1ab7934ba5a6056ea8b43078e71)

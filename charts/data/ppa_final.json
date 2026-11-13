@@ -1,0 +1,10 @@
+{
+ "area_mm2_with_fill": 3.05484,
+ "area_mm2_logic_taps": 0.84944,
+ "core_mm2": 3.055,
+ "util_nofill": 0.278052,
+ "power_mW": 12.607290409505367,
+ "setup_ws_ns_min_over_corners": 52.026,
+ "hold_ws_ns_min_over_corners": 0.0169,
+ "kind": "area/power: estimate (default activity); timing: post-route signoff-grade"
+}

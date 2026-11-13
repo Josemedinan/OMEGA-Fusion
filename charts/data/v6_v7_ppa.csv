@@ -1,0 +1,8 @@
+metric,key,v6,v7
+Std-cell instances (excl. fill) [k],design__instance__count__stdcell,111661,112514
+Std-cell area [mm²],design__instance__area__stdcell,849403,851973
+Timing-repair buffers [k],design__instance__count__class:timing_repair_buffer,20875,20940
+Antenna diodes [k],design__instance__count__class:antenna_cell,1598,2121
+Wirelength [m],route__wirelength,3318467,3335051
+Vias [k],route__vias,478554,481234
+Power estimate [mW],power__total,0.012607290409505367,0.012716787867248058

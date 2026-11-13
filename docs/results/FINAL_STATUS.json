@@ -1,0 +1,248 @@
+{
+ "TAPEOUT_READY": "NO",
+ "design": "omega_fusion_soc_asic",
+ "final_run": "OMEGA_V6_ECO2 / OMEGA_V6_SIGNOFF5",
+ "pdk": "sky130A ciel 8afc8346a57fe1ab7934ba5a6056ea8b43078e71",
+ "criteria": {
+  "drc_magic": {
+   "status": "PASS",
+   "evidence": "reports/signoff_v6/magic_drc/drc.magic.rpt",
+   "note": "0 errors"
+  },
+  "drc_klayout": {
+   "status": "PASS",
+   "evidence": "reports/signoff_v6/metrics.json",
+   "note": "klayout__drc_error__count=0"
+  },
+  "drc_route": {
+   "status": "PASS",
+   "evidence": "reports/signoff_v6/metrics.json",
+   "note": "route__drc_errors=0"
+  },
+  "lvs": {
+   "status": "PASS",
+   "evidence": "reports/signoff_v6/lvs/lvs.netgen.rpt",
+   "note": "Circuits match uniquely; 67,494 devices, 66,673 nets"
+  },
+  "antenna_macro": {
+   "status": "PASS",
+   "evidence": "reports/signoff_v6/manufacturability.rpt",
+   "note": "0 nets/0 pins post-DRT"
+  },
+  "gds_xor_magic_vs_klayout": {
+   "status": "PASS",
+   "evidence": "reports/signoff_v6/xor/",
+   "note": ""
+  },
+  "setup_all_corners": {
+   "status": "PASS",
+   "evidence": "reports/signoff_v6/sta_independent_summary.csv",
+   "note": "min WNS +52.03 ns (max_ss)"
+  },
+  "hold_all_corners": {
+   "status": "PASS",
+   "evidence": "reports/signoff_v6/sta_independent_summary.csv",
+   "note": "min WNS +0.017 ns (max_ff)"
+  },
+  "reset_recovery_removal": {
+   "status": "PASS",
+   "evidence": "reports/signoff_v6/sta/*recovery.rpt|*removal.rpt",
+   "note": "recovery >= +89.9 ns; removal >= +0.017 ns"
+  },
+  "sdc_coverage": {
+   "status": "PASS",
+   "evidence": "reports/signoff_v6/sta/*check_setup.rpt",
+   "note": "check_setup empty; rst_n constrained (SDC v4)"
+  },
+  "slew_flow_limit_0p75ns": {
+   "status": "FAIL",
+   "evidence": "reports/signoff_v6/sta/",
+   "note": "158 pins max_ss, 105 nom_ss, 16 nom_tt"
+  },
+  "cap_flow_limit_0p2pF": {
+   "status": "FAIL",
+   "evidence": "reports/signoff_v6/sta/",
+   "note": "18-23 pins per corner, 17 are CTS nodes"
+  },
+  "fanout_flow_limit_10": {
+   "status": "FAIL",
+   "evidence": "reports/signoff_v6/metrics.json",
+   "note": "83 nets per corner"
+  },
+  "liberty_only_limits": {
+   "status": "FAIL",
+   "evidence": "reports/signoff_v6/sta/*libonly*",
+   "note": "max_ff/max_tt/nom_ss 0; max_ss 3 slew on clk port net"
+  },
+  "signal_connectivity_open_short": {
+   "status": "PASS",
+   "evidence": "LVS + disconnected pins 0",
+   "note": ""
+  },
+  "pdn_vdd_vss": {
+   "status": "PASS",
+   "evidence": "reports/signoff_v6/irdrop.rpt",
+   "note": "PSM all shapes connected; IR drop 0.09 mV"
+  },
+  "rtl_regression": {
+   "status": "PASS",
+   "evidence": "verification/rtl_soc_asic_sim.log",
+   "note": ""
+  },
+  "gate_level_sim_zero_delay": {
+   "status": "PASS",
+   "evidence": "verification/gate_level_sim.log",
+   "note": ""
+  },
+  "gate_level_sim_sdf": {
+   "status": "UNVERIFIED",
+   "evidence": "",
+   "note": "not run"
+  },
+  "formal_equivalence_eqy": {
+   "status": "UNVERIFIED",
+   "evidence": "",
+   "note": "RUN_EQY off; not run"
+  },
+  "caravel_pdn_connectivity": {
+   "status": "PASS",
+   "evidence": "reports/caravel/pdn_generatepdn.log",
+   "note": "8 nets connected, no PSM-0038/39/69"
+  },
+  "caravel_wrapper_route_drc": {
+   "status": "PASS",
+   "evidence": "reports/caravel/",
+   "note": "0"
+  },
+  "caravel_wrapper_antenna": {
+   "status": "FAIL",
+   "evidence": "reports/caravel/WRAP_FINAL_PNR",
+   "note": "1 net / 1 pin"
+  },
+  "caravel_wrapper_sta": {
+   "status": "UNVERIFIED",
+   "evidence": "reports/caravel/wrapper_sta_worst_slack.csv",
+   "note": "raw per-corner slacks positive (setup>=+2.58, hold>=+0.091) but flow bookkeeping step killed (OOM)"
+  },
+  "caravel_wrapper_drc_lvs": {
+   "status": "UNVERIFIED",
+   "evidence": "",
+   "note": "not run (memory)"
+  },
+  "shuttle_precheck": {
+   "status": "UNVERIFIED",
+   "evidence": "",
+   "note": "not run"
+  },
+  "visual_captures_real": {
+   "status": "PASS",
+   "evidence": "visuals/",
+   "note": "26 PNGs from ODB/DEF/GDS; none synthetic"
+  },
+  "charts_real_data": {
+   "status": "PASS",
+   "evidence": "charts/ + charts/data/",
+   "note": "PNG+SVG with CSV/JSON"
+  },
+  "artifacts_complete": {
+   "status": "PASS",
+   "evidence": "deliverables/SHA256SUMS.txt, deliverables/SHA256SUMS.original.txt",
+   "note": "gds, lef, netlists, sdc in git (gzip); spef/klayout gds/def hashed, kept outside git"
+  },
+  "reproducibility": {
+   "status": "PARTIAL",
+   "evidence": "physical_design/scripts/reproduce.sh; docs/methodology/reproduction.md",
+   "note": "RTL regression and zero-delay gate-level simulation re-run from the repository layout (2026-11-12); the physical flow is documented and resumable but was NOT re-run end-to-end from this layout"
+  }
+ },
+ "blockers": [
+  "V7: 1 net above the fanout limit (11 loads incl. 1 antenna diode)",
+  "Caravel wrapper: only the PDN stage was run with the V7 macro; wrapper DRC/LVS/antenna/STA not run, wrapper antenna 1 net (V6 evidence)",
+  "no formal equivalence / SDF simulation / shuttle pre-check"
+ ],
+ "repository": {
+  "layout_version": "GitHub-ready layout 2026-11-12",
+  "rtl_regression_from_repo": "PASS",
+  "gate_level_zero_delay_from_repo": "PASS"
+ },
+ "criteria_baseline": "criteria below describe the V6 baseline layout (docs/results/SIGNOFF_REPORT.md); V7 is in the \"v7\" block",
+ "v7": {
+  "run": "OMEGA_V15_RT (ECO iterations 7-15 on V6)",
+  "report": "docs/results/V7_ECO_REPORT.md",
+  "criteria": {
+   "drc_magic": {
+    "status": "PASS",
+    "note": "0 errors"
+   },
+   "drc_klayout": {
+    "status": "PASS",
+    "note": "0 errors"
+   },
+   "drc_route": {
+    "status": "PASS",
+    "note": "0"
+   },
+   "lvs": {
+    "status": "PASS",
+    "note": "Circuits match uniquely; 68,162 devices, 67,003 nets, 0 differences"
+   },
+   "antenna_macro": {
+    "status": "PASS",
+    "note": "0 nets / 0 pins after detailed routing"
+   },
+   "gds_xor_magic_vs_klayout": {
+    "status": "PASS",
+    "note": "0 differences"
+   },
+   "setup_all_corners": {
+    "status": "PASS",
+    "note": "worst +54.67 ns (max_ss), LibreLane STA, extracted SPEF"
+   },
+   "hold_all_corners": {
+    "status": "PASS",
+    "note": "worst +0.102 ns (min_ff)"
+   },
+   "slew_flow_limit_0p75ns": {
+    "status": "PASS",
+    "note": "0 violations in 9 corners"
+   },
+   "cap_flow_limit_0p2pF": {
+    "status": "PASS",
+    "note": "0 violations in 9 corners"
+   },
+   "fanout_flow_limit_10": {
+    "status": "FAIL",
+    "note": "1 net (net2070 driven by fanout2070): 11 loads = 10 gates + 1 antenna diode"
+   },
+   "gate_level_sim_zero_delay": {
+    "status": "PASS",
+    "note": "verification/gate_level_sim_v7.log"
+   },
+   "gate_level_sim_sdf": {
+    "status": "UNVERIFIED",
+    "note": "not run"
+   },
+   "formal_equivalence_eqy": {
+    "status": "UNVERIFIED",
+    "note": "not run"
+   },
+   "caravel_wrapper_with_v7_macro": {
+    "status": "UNVERIFIED",
+    "note": "placement, routing, antenna, STA, DRC, LVS of the wrapper not run with the V7 macro (only the PDN stage was)"
+   },
+   "caravel_wrapper_drc_lvs_antenna_sta": {
+    "status": "UNVERIFIED",
+    "note": "not run (8 GB host); wrapper antenna was FAIL (1 net) with V6"
+   },
+   "shuttle_precheck": {
+    "status": "UNVERIFIED",
+    "note": "not run"
+   },
+   "caravel_pdn_connectivity_v7_macro": {
+    "status": "PASS",
+    "note": "wrapper PDN stage only (WRAP_V7_PDN): PSM-0040 connected for all 8 power nets; no PSM-0038/0039/0069",
+    "evidence": "physical_design/reports/caravel_v7/pdn_generatepdn_v7.log"
+   }
+  }
+ }
+}

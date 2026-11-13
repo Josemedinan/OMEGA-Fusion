@@ -1,0 +1,8 @@
+stage,violating_nets,violating_pins,diodes_inserted_total,source
+V2 GRT-stage pre-repair (violations),355,,,GRT-stage estimate
+V2 ANTENNA_11 (316 diodes),5,20,316,GRT-stage estimate
+"V2 ANTENNA_12 (8 iter, margin 20)",5,38,687,GRT-stage estimate
+V3 post-DRT (real wires),2,2,,post-DRT real check (OpenROAD check_antennas)
+V4 post-DRT,0,0,,post-DRT real check (OpenROAD check_antennas)
+V5 post-DRT,0,0,,post-DRT real check (OpenROAD check_antennas)
+V6 FINAL post-DRT,0,0,,post-DRT real check (OpenROAD check_antennas)

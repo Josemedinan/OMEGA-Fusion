@@ -1,0 +1,12 @@
+stage,kind,run,step,instances,area_um2,stdcell_count,tap,fill,seq,comb,timing_repair_buf,clock_buf,clock_inv,antenna_cells,antenna_nets,antenna_pins,hpwl_um,grt_wl_um,drt_wl_um,grt_overflow
+synth (Yosys),synthesis netlist,OMEGA_V2_SYNTH_01,final,43448,575313.0208,,,,,,,,,,,,,,,
+post-GPL,placement,OMEGA_V4_FULL,01-openroad-globalplacement,86918,629703,86918,43470,1284,10323,32660,,,,,,,,,,
+post-GPL repair,placement,OMEGA_V4_FULL,05-openroad-repairdesignpostgpl,98813,728700,97529,43470,1284,10323,32660,10611,,,,,,2796010,,,
+detailed place,placement,OMEGA_V4_FULL,07-openroad-detailedplacement,97529,723881,97529,43470,1284,10323,32660,10611,,,,,,2796010,,,
+CTS,post-CTS,OMEGA_V4_FULL,08-openroad-cts,101083,757260,99799,43470,1284,10323,32660,10611,2168,102,,,,2936640,,,
+post-CTS repair,post-CTS,OMEGA_V4_FULL,10-openroad-resizertimingpostcts,111170,858231,109886,43470,1284,10323,32660,20698,2168,102,,,,3029440,,,
+GRT (V4),global-route,OMEGA_V4_FULL,12-openroad-globalrouting,111170,858231,109886,43470,1284,10323,32660,20698,2168,102,,,,3029440,4395369,,
+"GRT (ECO, V6)",global-route,OMEGA_V6_ECO2,01-openroad-globalrouting,112735,853698,111451,43470,1284,10323,32660,20875,2168,102,1388,,,3029440,4518085,,
+antenna/diode repair,global-route,OMEGA_V6_ECO2,04-openroad-repairantennas,112846,853975,111562,43470,1284,10323,32660,20875,2168,102,1499,0,0,3029440,4518085,,
+detailed route,post-route,OMEGA_V6_ECO2,06-openroad-detailedrouting,112945,854223,111661,43470,1284,10323,32660,20875,2168,102,1598,0,0,3029440,4518085,3318467,
+fill + final,post-route,OMEGA_V6_ECO2,14-openroad-fillinsertion,731228,3054840,111661,43470,619567,10323,32660,20875,2168,102,1598,0,0,3029440,4518085,3318467,
