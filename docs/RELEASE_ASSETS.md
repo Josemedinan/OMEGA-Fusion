@@ -1,6 +1,6 @@
 # Release assets (physical release)
 
-Large physical files are **not** stored in git. They are distributed as GitHub Release assets (all files below are gzip-compressed; the SHA-256 is of the `.gz` file as uploaded). **Status: prepared locally on 2026-11-13; they are not published until the release exists on GitHub** — this file will not claim otherwise.
+Large physical files are **not** stored in git. They are distributed as GitHub Release assets (all files below are gzip-compressed; the SHA-256 is of the `.gz` file as uploaded). **Status: published on 2026-11-13 as the GitHub pre-release [`v0.7.0-macro-candidate`](https://github.com/Josemedinan/OMEGA-Fusion/releases/tag/v0.7.0-macro-candidate).** All 10 assets plus `SHA256SUMS.txt` were downloaded back from GitHub and every SHA-256 matched (`shasum -a 256 -c`: 10/10 OK; the manifest is byte-identical to the local one).
 
 Local archive of the assets: `~/omega-fusion-tapeout/github_release_assets/` (engineering archive, outside the repository).
 

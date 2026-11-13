@@ -234,7 +234,7 @@ What the project can plausibly contribute (education in RISC-V and ASIC flow, op
 
 ## Release assets, presentation and provenance
 
-* Physical release (GDS, SPEF, KLayout GDS, DEF as `.gz`, with SHA-256): [`docs/RELEASE_ASSETS.md`](docs/RELEASE_ASSETS.md). LEF, netlists and SDC are in `deliverables/`. *The assets are prepared locally; this README does not claim they are published until the GitHub Release exists.*
+* Physical release (GDS, SPEF, KLayout GDS, DEF as `.gz`, with SHA-256): [`docs/RELEASE_ASSETS.md`](docs/RELEASE_ASSETS.md). LEF, netlists and SDC are in `deliverables/`. Published as the pre-release [`v0.7.0-macro-candidate`](https://github.com/Josemedinan/OMEGA-Fusion/releases/tag/v0.7.0-macro-candidate); the downloaded assets were verified against the manifest (10/10 SHA-256 OK).
 * Release candidate selection and file lineage (which file produced which): [`docs/results/RELEASE_CANDIDATE.md`](docs/results/RELEASE_CANDIDATE.md); the open fanout net: [`docs/results/NET2070_ANALYSIS.md`](docs/results/NET2070_ANALYSIS.md).
 * Presentation (18 slides, V7 images and metrics): [`docs/results/OMEGA_Fusion_V7_presentation.pdf`](docs/results/OMEGA_Fusion_V7_presentation.pdf) (the older V6 deck is archived as `docs/results/archive_v6/OMEGA_Fusion_physical_design_presentation_V6.pdf`).
 * Wrapper-level tasks that still need a large machine, with the commands: [`docs/results/PENDING_VERIFICATION.md`](docs/results/PENDING_VERIFICATION.md).

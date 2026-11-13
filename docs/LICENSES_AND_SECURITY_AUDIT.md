@@ -29,4 +29,4 @@ Apache-2.0 for the original OMEGA-Fusion sources. It is consistent with the Efab
 | Proprietary files | none: no EDA vendor tools or libraries, no PDK files, no foundry NDA material |
 | Binary/large files | only the gzip'd physical deliverables (≤ 28 MB each) and a PDF; handled as release assets, see `docs/RELEASE_ASSETS.md` |
 | `.gitignore` | excludes build output, run databases (`runs/`, `*.odb`, `*.def`, `*.spef`, `*.sdf`, `*.gds`); the template `.def` files under `caravel/openlane/fixed_dont_change/` are explicitly kept |
-| GitHub workflow | `.github/workflows/rtl.yml` runs only the RTL regression and checksums; it uses `actions/checkout` and `apt` only; **it has not been executed on GitHub yet** |
+| GitHub workflow | `.github/workflows/rtl.yml` runs only the RTL regression and checksums; it uses `actions/checkout` and `apt` only; executed on GitHub on 2026-11-13: the run on `main` finished with `success` (RTL regression + checksums, ~1 min) |

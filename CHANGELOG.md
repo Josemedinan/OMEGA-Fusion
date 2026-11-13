@@ -1,6 +1,9 @@
 # Changelog
 
-## Unreleased — publication preparation (2026-11-13)
+## 2026-11-13 — first publication
+* Published `Josemedinan/OMEGA-Fusion` (public) and the pre-release `v0.7.0-macro-candidate` with the physical assets; license Apache-2.0 (owner decision); CI run on `main`: success.
+
+## Publication preparation (2026-11-13)
 * Open `net2070` (V7) analysed: SDC rule, 33 % of cap limit, 38 % of slew limit, +76 ns setup / +5 ns hold slack through it; not changed (`docs/results/NET2070_ANALYSIS.md`).
 * Release candidate selection and file lineage (`docs/results/RELEASE_CANDIDATE.md`); V7 images for every phase with version in the title (`visuals/v7/`); V6-vs-V7 charts 19/20; 18-slide V7 presentation; wrapper PDN stage re-run with the V7 macro (PASS, 8/8 nets).
 * New: `docs/INDUSTRIAL_APPLICATIONS.md`, `docs/LICENSES_AND_SECURITY_AUDIT.md`, `docs/RELEASE_ASSETS.md`, `docs/results/PENDING_VERIFICATION.md`, `scripts/pending/`.
