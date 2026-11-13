@@ -13,7 +13,7 @@
 | 7 | Shuttle pre-check | UNVERIFIED | needs a signed-off wrapper GDS and the current program rules | Docker, ≥ 16 GB | `scripts/pending/run_precheck.sh` (stub with instructions) |
 | 8 | Fanout rule on `net2070` | FAIL (1 net) | deliberately left; see `NET2070_ANALYSIS.md` | a re-route on a large host | recommended minimal ECO documented there |
 | 9 | Physical flow reproduction from this repository layout | NOT DONE | only RTL + gate-level re-run from it | ≥ 16 GB, ~10 h | `physical_design/scripts/reproduce.sh` (reference sequence) |
-| 10 | License of the original sources | OPEN | owner's decision | — | `docs/LICENSES_AND_SECURITY_AUDIT.md` §3 |
+| 10 | License of the original sources | CLOSED — Apache-2.0 (owner, 2026-11-13) | — | — | `LICENSE`, `NOTICE` |
 
 Requirements for items 2–4 and 9: ≥ 16 GB RAM, ≥ 60 GB free disk, Docker, LibreLane 3.0.11, SKY130A (ciel `8afc8346a57fe1ab7934ba5a6056ea8b43078e71`), the V7 release assets unpacked into one directory (`docs/RELEASE_ASSETS.md`) and `OMEGA_RELEASE_V7` pointing to it (layout described in the script header). The wrapper config for V7 is `caravel/openlane/config_v7.json` (paths via `$OMEGA_RELEASE`).
 

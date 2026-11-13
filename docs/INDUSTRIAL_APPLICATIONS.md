@@ -12,7 +12,7 @@ What the project actually is: a small single-cycle RV32I-**subset** controller (
 ## 2. Open hardware development
 * **Demonstrated:** open tools only (LibreLane/OpenROAD/Yosys/Magic/KLayout/Netgen, SKY130A PDK); configs, SDC (v2→v4), flow and ECO scripts, per-iteration evidence and SHA-256 manifests are in the repository; both the V6 baseline and the V7 candidate are kept side by side.
 * **Possible next:** CI for the physical flow on a large runner; publishing the physical release as GitHub Release assets; a `make`-style wrapper around the LibreLane stages.
-* **Needs validation:** end-to-end reproduction from a clean checkout (only the RTL regression and the gate-level simulation were re-run from the repository layout; the physical flow was not re-run from it); the licensing of the original RTL (owner's decision pending, see `docs/LICENSES_AND_SECURITY_AUDIT.md`).
+* **Needs validation:** end-to-end reproduction from a clean checkout (only the RTL regression and the gate-level simulation were re-run from the repository layout; the physical flow was not re-run from it).
 
 ## 3. Embedded-system prototyping
 * **Demonstrated:** program loading through IMEM pins, CPU execution of an MMIO program that drives the accelerator (C[0,0]=4, IRQ=1) in RTL and gate level; a Wishbone bridge with an 8-word DMA handshake simulated end to end (`tb/regression/`).

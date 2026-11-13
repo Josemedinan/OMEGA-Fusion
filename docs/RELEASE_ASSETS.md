@@ -27,4 +27,4 @@ shasum -a 256 -c SHA256SUMS.txt   # in the directory with the downloaded assets 
 `deliverables/lef/*.gz`, `deliverables/netlist/*.gz`, `deliverables/timing/*.sdc` (V6) and `deliverables/v7/{lef,netlist,timing}` (V7), with `SHA256SUMS.txt` (files in git) and `SHA256SUMS.original.txt` (hashes of the uncompressed originals in the engineering archive).
 
 ## Notice
-The layouts include standard cells of SkyWater SKY130 `sky130_fd_sc_hd` (Apache-2.0); see `docs/LICENSES_AND_SECURITY_AUDIT.md`. The license of the original OMEGA-Fusion sources is pending the owner’s decision.
+The layouts include standard cells of SkyWater SKY130 `sky130_fd_sc_hd` (Apache-2.0); see `docs/LICENSES_AND_SECURITY_AUDIT.md`. The original OMEGA-Fusion sources are Apache-2.0 (`LICENSE`, `NOTICE`).

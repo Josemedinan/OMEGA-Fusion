@@ -1,0 +1,10 @@
+OMEGA-Fusion
+Copyright 2026 Josemedinan (repository owner) and contributors.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This repository includes material from third parties, also under the Apache License 2.0:
+  * Efabless Corporation, caravel_user_project template files (caravel/rtl/user_project_wrapper.v, defines.v,
+    user_defines.v, uprj_netlists.v; caravel/openlane/fixed_dont_change/*, pin_order.cfg, base_user_project_wrapper.sdc).
+    Copyright 2020 Efabless Corporation.
+  * The released layouts, netlists and LEF contain or instantiate standard cells of the SkyWater SKY130
+    sky130_fd_sc_hd library (https://github.com/google/skywater-pdk), Apache License 2.0.
