@@ -1,0 +1,4 @@
+Generated 20 RV32I-subset instructions -> firmware/rom/omega_demo.hex
+WARNING: tb/regression/tb_omega_fusion_soc_asic.sv:26: $readmemh(firmware/rom/omega_demo.hex): Not enough words in the file for the requested range [0:255].
+PASS ASIC SOC: programmed IMEM, RV32 controller, MMIO folded MAC, C00=4, IRQ=1
+tb/regression/tb_omega_fusion_soc_asic.sv:54: $finish called at 3970000 (1ps)

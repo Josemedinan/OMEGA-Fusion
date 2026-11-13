@@ -1,0 +1,17 @@
+name: RTL regression
+on:
+  push:
+  pull_request:
+jobs:
+  rtl:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Verilator
+        run: sudo apt-get update && sudo apt-get install -y verilator
+      - name: Verilator version
+        run: verilator --version
+      - name: Full RTL regression (oracles, lint, directed, SoC, Caravel wrapper)
+        run: bash scripts/run_all.sh
+      - name: Deliverable checksums
+        run: (cd deliverables && sha256sum -c SHA256SUMS.txt) && (cd deliverables/v7 && sha256sum -c SHA256SUMS.txt)

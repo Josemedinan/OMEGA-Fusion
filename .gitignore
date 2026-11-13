@@ -1,0 +1,21 @@
+# build products (regenerable)
+build/
+obj_dir/
+*.vvp
+*.vcd
+*.fst
+*.o
+__pycache__/
+*.pyc
+.DS_Store
+.idea/
+.vscode/
+# local run databases and large intermediates (see docs/methodology/cleanup_manifest.md)
+runs/
+*.odb
+*.spef
+*.sdf
+*.gds
+*.def
+!deliverables/**/*.gz
+!caravel/openlane/fixed_dont_change/*.def
