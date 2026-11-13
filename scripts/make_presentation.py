@@ -138,7 +138,7 @@ text(f, 0.04, 0.30, [f"Target 10 MHz (100 ns). V7: {M7['design__instance__area__
 f = slide("Potential applications (details: docs/INDUSTRIAL_APPLICATIONS.md)", "demonstrated · possible next · still needs validation")
 table(f, [0.04, 0.18, 0.92, 0.66], [["Area", "Demonstrated here", "Needs validation / future"],
     ["Education & RISC-V research", "Complete, inspectable RTL→GDSII example incl. failures and fixes", "Full RV32I/compliance, pipeline, CSR/interrupts"],
-    ["Open hardware", "Reproducible LibreLane configs, SDC, ECO scripts, hashes", "Re-run from scratch on a ≥16 GB host; license decision"], ["Embedded prototyping", "MMIO accelerator + Wishbone bridge simulated end to end", "Wrapper DRC/LVS/STA, bring-up on silicon or FPGA"],
+    ["Open hardware", "Reproducible LibreLane configs, SDC, ECO scripts, hashes", "Re-run from scratch on a ≥16 GB host; CI for the physical flow"], ["Embedded prototyping", "MMIO accelerator + Wishbone bridge simulated end to end", "Wrapper DRC/LVS/STA, bring-up on silicon or FPGA"],
     ["PPA research", "Measured V6→V7 closure methodology; folded vs parallel MAC RTL", "Side-by-side physical comparison of the two MACs"], ["Specialized workloads", "INT4/INT8 4×4 tile engine, functionally verified", "Throughput/energy measurements; larger tiles; SRAM"],
     ["Talent development", "Documented pitfalls and root-cause analyses", "Guided exercises, course material"], ["Accessible EDA flows", "Open tools only, 8 GB laptop to routed macro", "CI for the physical flow"]], [0.2, 0.42, 0.38], size=9.5); done(f)
 # 17 limitations
