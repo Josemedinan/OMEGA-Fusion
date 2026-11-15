@@ -152,3 +152,21 @@ removed >20MB files in runs/OMEGA_V12_RT except 15-odb odb/def (fallback)
 removed runs/OMEGA_V11_RT (superseded by V12/V13; summary+antenna logs copied to physical_design/reports/iterations)
 removed runs/OMEGA_V12_RT, V13_RT, V14_RT (superseded by V15; summaries+antenna logs in physical_design/reports/iterations)
 # V7 session: see cleanup_manifest.md section "V7 session" for the list of removed iteration runs
+removed wrapper PDN-stage runs WRAP_FINAL_PDN (V6) and WRAP_V7_PDN (V7): stage-only evidence logs are archived in the repo (physical_design/reports/caravel*)
+removed >3MB odb/def/netlist/sta intermediates of runs/W7_A steps <49 (disk 100%); final steps kept
+removed OMEGA_V15_RT/19-magic-streamout/*.mag (identical copy kept in final/mag)
+removed OMEGA_V15_RT/14-openroad-fillinsertion odb/def/netlists (byte-identical copies in step 15 and final/)
+removed OMEGA_V15_RT/17 sta.log, max.rpt, lib (regenerable; summary kept)
+removed runs/W7_A/49 odb/def (byte-identical copies in step 50)
+removed signoff_v7/wrapper/runs/W7_A, W7_B (superseded wrapper runs at 25 ns / old LEF; STA reports, antenna logs, DRC report archived in signoff_v7/wrapper/evidence_*)
+removed >3MB db/netlist/sdf/spef/log files in signoff_v7/wrapper/runs/W7_D steps 35-53 (old routing superseded by boundary-buffer ECO run; STA evidence archived)
+removed W7_E duplicates (15 odb/def identical to 16; drt-run-*, 11, 05 intermediates)
+removed signoff_v7/wrapper/runs/W7_D entirely (superseded; 50 ns STA evidence archived in evidence_W7_D_50ns)
+regenerated runs/W7_D header files (vh copied from the V6 wrapper run — identical port list; h.json regenerated with host Yosys) because the flow state references them
+removed W7_E large files (flow stopped to apply wire-length repeaters; evidence archived in evidence_W7_E)
+removed OMEGA_V15_RT/16-openroad-rcx SPEF (3 files, byte-identical copies in final/spef)
+removed ~/omega-fusion-tapeout/github_release_assets/*.spef.gz (6 files; all published and verified in GitHub release v0.7.0-macro-candidate, re-downloadable)
+removed OMEGA_V15_RT/19 gds duplicates (identical to final/gds)
+removed OMEGA_V15_RT 06/drt-run-*, 24-magic-drc/views (regenerable)
+removed OMEGA_V15_RT/17 *.sdf (copies in final/sdf)
+removed ~/omega-fusion/build/soc_eco, build/soc_physical, reports/soc (old ORFS SoC attempts, ~5.1 GB) on explicit user authorization 2026-11-13; 6_final.gds hashes kept in stable_version_hashes.txt; build/physical (validated accelerator GDS) kept

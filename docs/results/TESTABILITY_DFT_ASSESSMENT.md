@@ -1,0 +1,29 @@
+# Testability / usability assessment of the fabricated chip (V7 macro in the Caravel wrapper)
+
+Date 2026-11-13. Method: reading `rtl/`, `caravel/rtl/omega_wb_bridge.v`, `user_project_wrapper.v`, simulation logs. **No test was run on silicon (none exists).** Findings are design-review conclusions, classified A (blocks use of a fabricated chip), B (hampers test/bring-up), C (note).
+
+## What a fabricated OMEGA-Fusion could do (derived from the RTL)
+* **Reset access.** `omega_rst_n` and `omega_run` are firmware-controlled registers (Wishbone reg 0x000: bit0 run, bit1 rst_n). `wb_rst_i` (management reset) holds the macro in reset. Reset is therefore reachable from the management SoC. OK.
+* **Clock access.** The macro runs on `wb_clk_i` (management core clock), no divider. Signed-off envelope: ≤ 20 MHz (see `CLOCK_RESET_COHERENCE.md`). **[B] Nothing in hardware prevents firmware from raising the core clock above the OMEGA limit**; the failure mode would be functional corruption at high frequency, not damage.
+* **Program loading.** 256×32 instruction RAM written through Wishbone window 0x…400–0x…7FF (`imem_we/waddr/wdata`, only while `run=0`). OK.
+* **Observability.** `la_data_out` = {dma address capture, pc, result, status} (128 bits), `user_irq[0]` = accelerator IRQ, Wishbone readback of pc (0x004), result (0x008), status (0x00C), DMA address (0x010). `io_out` is tied 0 and `io_oeb` tied 1: no GPIO is used. Results are readable by the management CPU. OK.
+* **Debug interfaces.** None (no JTAG/step/halt/trace). The CPU halts only on an illegal instruction (`cpu_illegal`, visible in status). **[B] No single-step, no breakpoint, no register-file read.**
+
+## Deficiencies
+| # | Finding | Class | Effect on a fabricated chip | Minimal remedy (would require a new variant + full re-verification) |
+|---|---|---|---|---|
+| 1 | **IMEM cannot be read back** (`wbs_dat_o <= 0` for the instruction window). | **B** | A wrong/failed instruction write cannot be detected except by executing the program; manufacturing defects in the 8,192 IMEM flops can only be inferred from wrong program behaviour. | Expose read data from `imem[waddr]` through a status register (adds a mux on the IMEM read path and one bridge register). |
+| 2 | **IMEM, register file and accelerator operand/result arrays have no scan chain / BIST / ATPG structure.** 10,323 flops, none scannable (SKY130 hd has `sdf*` scan flops but the design does not use them). | **B** | No structural manufacturing test; test would be functional only (run firmware, compare mailbox). Fault coverage unknown; no coverage measurement exists. | Scan insertion (Yosys/OpenROAD DFT flow) — large change (area, timing, reset/clock gating checks); not recommended without a test-cost decision. |
+| 3 | **IMEM power-up state undefined** (flops without reset; `imem` is written only by `imem_we`). Unprogrammed locations execute as arbitrary instructions. | **B/C** | Programs must fill all 256 words (unused with NOP `0x00000013`) before `run=1`; the demo ROM and testbench do (`$readmemh` pads NOP). A firmware that leaves words unprogrammed may hit `cpu_illegal`. Documented behaviour, not a bug. | Document in firmware guide; optional hardware reset-to-NOP costs a reset on 8,192 flops. |
+| 4 | **Reset release is software-only and unsynchronized at the pad level**, but synchronous in the design (bridge flop on `wb_clk_i`). Reset assertion is asynchronous inside the macro. | C | Safe in the single-domain integration. Removal/recovery of `rst_n` at the macro boundary: macro model gives recovery as setup 8.3 ns (max_ss) and a negative hold (−3.0 ns); wrapper STA positive. | None. |
+| 5 | **Accelerator DMA ports are served by the Wishbone bridge**, i.e. the management CPU must service each of the eight word reads (poll `0x018`, write data to `0x014`). | C | Functionally correct (tested in `tb_omega_bridge`); slow, firmware-bound. | None required. |
+| 6 | **No on-chip clock/PLL/temperature monitor; no way to read process corner.** | C | Silicon characterization limited to functional pass/fail vs frequency. | None. |
+| 7 | **Unknown/illegal MMIO accesses** read zero and write nothing; accelerator signals error through a sticky flag only inside the accelerator MMIO space (not directly visible from the host). | C | Host cannot see accelerator `error_sticky`/`done_sticky` except via the CPU program writing results to the mailbox. | Route accelerator STATUS bits into `omega_status`. |
+| 8 | **`cpu_illegal` is a combinational output of the IMEM mux and decode (33 ns clk→out in SS).** | C | It limits the system clock (see coherence document). | Register `cpu_illegal` in the macro (RTL change → new macro). |
+
+**Verdict on viability:** the chip can be reset, programmed, started, observed and re-run through the Caravel management SoC without new hardware — items A: **none found**. Items B (no IMEM readback, no scan/BIST, no debug) make bring-up and manufacturing screening **weak**: a fabricated chip could only be screened by running a known program and checking `result`/`pc`. If a production-grade test strategy is required, remedy 1 (cheap) and a scan/BIST decision (expensive) should be made before any submission. No change was made in this pass.
+
+## Power, supply and package notes (from the existing reports; see `POWER_IR_REVIEW.md`)
+* Supplies used: `vccd1` (1.8 V digital core) and `vssd1`. `vccd2`, `vdda1/2`, `vssa1/2`, `vssd2` are carried by the wrapper PDN but not used by the macro.
+* Estimated power at 10 MHz: ≈ 12.7 mW (nom_tt, default activity) — an OpenROAD estimate. No thermal analysis was done; at this level the die self-heating is expected to be negligible, but this is an estimate, not a measurement.
+* Physical interfaces: all user I/O pads are tied inputs (`io_oeb=1`, `io_out=0`); the chip is reached only through Caravel's management interface. No analog pins are used.
