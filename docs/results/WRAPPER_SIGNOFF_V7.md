@@ -31,9 +31,18 @@ This document records what was actually run on the Caravel `user_project_wrapper
 
 Setup and hold close with margin, because the STA already includes the delay of the slow edges. The design-rule limits (max transition 1.5 ns) are nevertheless violated: worst slew 4.16 ns, mostly on `ANTENNA_*` diode pins and on `wire*` repeater inputs.
 
-Root cause found: all functional wrapper pins (`wb_*`, `wbs_*`, `la_*`, `user_irq`) are on the **south** edge (`pin_order.cfg`), while the macro is placed with orientation `N` at (560, 860), so its 176 signal pins are on its **north** face (y = 2659.72). Each net must go around the 1.8 mm macro, about 1.8 mm of wire with 0.77 pF, and repeaters cannot be placed over the macro. The macro driver therefore sees a long first segment and the slew is high.
+Root cause (corrected 2026-11-15; the first version of this document said all macro pins were on one face, which was wrong): all functional wrapper pins (`wb_*`, `wbs_*`, `la_*`, `user_irq`) are on the **south** edge (`pin_order.cfg`), while the macro LEF has its 179 pins on all four edges: 92 outputs on the top edge, 8 outputs and 34 inputs on the bottom, 24 inputs on the top, 11 on the right and 8 on the left. With orientation `N` at (560, 860) the 92 top outputs are about 1.8 mm of wire away from the south pins, around the macro (0.7 pF per net), and repeaters cannot be placed over the macro, so the first segment is long and the slew is high. Antenna diodes added on those long nets are counted as extra load/fanout and violate the slew limit themselves.
 
-Proposed fix (not applied): place the macro with a flipped orientation (`FS`) in `macro.cfg` so its pins face the south edge, about 860 µm from the wrapper pins, with no macro crossing. This changes only the wrapper floorplan, not the frozen macro. It requires re-running the whole wrapper chain and every check above (Magic DRC alone is about 6 h on this host).
+Experiments on the plain flow (no ECO), worst corner `max_ss_100C_1v60`, all with route DRC 0 and antenna 0:
+
+| Run | Macro placement | Slew | Cap | Fanout | Worst setup / worst hold (any of 9 corners) |
+|---|---|---|---|---|---|
+| `W7_G` (previous, with repeater ECO) | `N` at (560, 860) | 876 | 100 | 58 | +8.81 / +0.182 ns |
+| `W8_C` | `N` at (560, 860) | 850 | 26 | not counted | +9.48 / +0.162 ns |
+| `W8_B` | `FS` at (560, 860) | 566 | 57 | not counted (17 nets in the sampled list) | +10.66 / +0.069 ns |
+| `W8_D` | `FS` at (560, 200) | 1141 | 104 | 35 (flow metric) | +11.82 / +0.148 ns |
+
+`FS` at y = 860 is the best placement tried: it brings the 92 output pins to the south side, but the 34 bottom inputs move to the far side. Lowering the macro to y = 200 made it **worse** (1141 slew violations), so the best candidate is `W8_B`. No run reaches zero violations, so the criterion remains a **FAIL**; the remaining nets (about 40 pins on the far side of the macro, plus diodes counted as load on long nets) need a buffering ECO placed in the free channels around the macro, or a written owner waiver. Timing (setup and hold) closes in all 9 corners in every run.
 
 ## What is still required before TAPEOUT_READY can become YES
 
