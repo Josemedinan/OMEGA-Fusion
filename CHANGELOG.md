@@ -31,3 +31,7 @@
 
 ## v0.2 / v0.3
 * Accelerator with folded/parallel MAC, MMIO, DMA loader, RV32I-subset demo SoC; programmable-IMEM ASIC top.
+
+## 2026-11-16
+- Portfolio README; previous long README kept in `docs/archive/`.
+- New charts 21-24 (GDSII quality evolution, wrapper placement sweep, sign-off scoreboard, V6 vs V7 GDS) and wrapper images `visuals/v8_wrapper/`.

@@ -25,6 +25,7 @@ if is_def:
     c.produce_obstructions = False
     c.produce_blockages = False
     c.produce_routing = True
+    c.produce_special_routing = J.get("special", True)
     c.produce_labels = False
 lv.load_layout(inp, opt, "", 0)
 if not is_def:

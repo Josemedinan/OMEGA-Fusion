@@ -274,3 +274,6 @@ Signoff evidence: PASS/FAIL/UNVERIFIED table, post-route STA slack map (9 corner
 * `charts/16_power_irdrop.png` (+ SVG)
 
 * `charts/17_ppa_summary.png` (+ SVG)
+
+## Caravel wrapper with the V7 macro (`visuals/v8_wrapper/`, 2026-11-16)
+Rendered by `physical_design/scripts/vis_wrapper_v8.py` from LibreLane run `W8_A` (macro `FS` at (560, 860)): `w8_01` floorplan and pin placement (pins parsed from DEF), `w8_02` PDN (KLayout), `w8_03` placement, `w8_04` signal routing (special nets hidden). Charts 21-24 come from `physical_design/scripts/plot_portfolio.py`.
